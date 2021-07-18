@@ -1,109 +1,52 @@
-.main-navigation {
-	display: block;
-	width: 100%;
+.nav {
+	padding: 10px 0;
 
 	ul {
-		display: none;
+		display: flex;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+		& > li {
+			position: relative;
+			margin: 0 18px;
+		}
+
+		& > li:after {
+			content: '';
 			position: absolute;
+			left: 0;
+			right: 0;
+			width: 0;
+			height: 2px;
 			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
+			background-color: $color__text-navigation;
+			transition: all .3s cubic-bezier(.175,.885,.32,1.275);
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
+		& > li:hover:after {
+			width: 100%;
 		}
 	}
 
 	a {
-		display: block;
+		display: inline-block;
+		color: $color__text-navigation;
 		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+		text-transform: uppercase;
+		font-size: 17px;
+		font-weight: 700;
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
+.nav--left {
+	ul {
+		justify-content: flex-end;
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
-
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
+.nav--right {
+	ul {
+		justify-content: flex-start;
 	}
 }

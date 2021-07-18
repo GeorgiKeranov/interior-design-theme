@@ -9,3 +9,15 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin element-with-animation-hide {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+}
+
+@mixin element-with-animation-show {
+	position: static;
+	visibility: visible;
+	opacity: 1;
+}

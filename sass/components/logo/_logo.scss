@@ -1,0 +1,13 @@
+.logo {
+	display: block;
+	width: 120px;
+	height: 94px;
+	background-image: url(images/logo.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: opacity .5s;
+
+	&:hover {
+		opacity: .4
+	}
+}

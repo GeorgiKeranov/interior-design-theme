@@ -25,35 +25,50 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'idt' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$idt_description = get_bloginfo( 'description', 'display' );
-			if ( $idt_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $idt_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__left">
+					<nav class="nav nav--left">
+						<ul>
+							<li>
+								<a href="#">Проекти</a>
+							</li>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'idt' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+							<li>
+								<a href="#">Услуги</a>
+							</li>
+
+							<li>
+								<a href="#">Планиране</a>
+							</li>
+						</ul>
+					</nav><!-- /.nav -->
+				</div><!-- /.header__left -->
+
+				<div class="header__center">
+					<a href="<?php echo home_url('/') ?>" class="logo"></a>
+
+					<a href="<?php echo home_url('/') ?>" class="dot"></a>
+				</div><!-- /.header__center -->
+
+				<div class="header__right">
+					<nav class="nav nav--right">
+						<ul>
+							<li>
+								<a href="#">За Нас</a>
+							</li>
+
+							<li>
+								<a href="#">Блог</a>
+							</li>
+
+							<li>
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+					</nav><!-- /.nav -->
+				</div><!-- /.header__right -->
+			</div><!-- /.header__inner -->
+		</div><!-- /.container -->
+	</header><!-- /.header -->

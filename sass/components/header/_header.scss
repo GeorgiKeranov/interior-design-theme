@@ -1,0 +1,43 @@
+.header {
+	position: sticky;
+	top: 0;
+	transition: height 1s ease;
+	background-color: white;
+	padding: 7px 0;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
+
+	.header__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__center {
+	    padding: 0 20px;
+	}
+
+	.header__left,
+	.header__right {
+		flex: 1 1 0%;
+	}
+
+	.dot {
+		@include element-with-animation-hide;
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-color: #000;
+		border-radius: 50%;
+		transition: opacity .5s;
+	}
+}
+
+.header--scroll {
+	.logo {
+		@include element-with-animation-hide;
+	}
+
+	.dot {
+		@include element-with-animation-show;
+	}
+}

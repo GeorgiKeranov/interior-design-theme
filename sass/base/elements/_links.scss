@@ -15,6 +15,7 @@ a {
 		outline: thin dotted;
 	}
 
+	&:focus,
 	&:hover,
 	&:active {
 		outline: 0;

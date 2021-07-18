@@ -143,7 +143,9 @@ function idt_scripts() {
 	wp_enqueue_style( 'idt-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'idt-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'idt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'google-ubuntu-font', 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), _S_VERSION );
+
+	wp_enqueue_script( 'idt-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery',), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

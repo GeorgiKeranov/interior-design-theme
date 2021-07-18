@@ -7,10 +7,15 @@
  * @package Interior_Design_Theme
  */
 
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
+
+define( 'IDT_THEME_DIR', get_template_directory() );
 
 if ( ! function_exists( 'idt_setup' ) ) :
 	/**
@@ -21,13 +26,25 @@ if ( ! function_exists( 'idt_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function idt_setup() {
+		// Boot the carbon fields package for custom fields
+		require_once( 'vendor/autoload.php' );
+		\Carbon_Fields\Carbon_Fields::boot();
+
+		/**
+		 * Add custom options like template fields and global theme fields to the theme
+		 */
+		function idt_add_custom_options_to_theme() {
+			include_once(IDT_THEME_DIR . '/custom-options/post-meta.php');
+		}
+		add_action( 'carbon_fields_register_fields', 'idt_add_custom_options_to_theme' );
+
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Interior Design Theme, use a find and replace
 		 * to change 'idt' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'idt', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'idt', IDT_THEME_DIR . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -156,27 +173,32 @@ add_action( 'wp_enqueue_scripts', 'idt_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+require IDT_THEME_DIR . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require IDT_THEME_DIR . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+require IDT_THEME_DIR . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require IDT_THEME_DIR . '/inc/customizer.php';
+
+/**
+ * Disable guttenberg editor for certain templates
+ */
+require IDT_THEME_DIR . '/inc/disable-gutenberg.php';
 
 /**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	require IDT_THEME_DIR . '/inc/jetpack.php';
 }
 

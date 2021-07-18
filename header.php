@@ -72,3 +72,5 @@
 			</div><!-- /.header__inner -->
 		</div><!-- /.container -->
 	</header><!-- /.header -->
+
+	<main class="main">

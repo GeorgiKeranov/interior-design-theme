@@ -29,6 +29,10 @@
 		background-color: #000;
 		border-radius: 50%;
 		transition: opacity .5s;
+
+		&:hover {
+			opacity: .4;
+		}
 	}
 }
 

@@ -872,6 +872,10 @@ textarea {
 	transition: opacity .5s;
 }
 
+.header .dot:hover {
+	opacity: .4;
+}
+
 .header--scroll .logo {
 	position: absolute;
 	visibility: hidden;

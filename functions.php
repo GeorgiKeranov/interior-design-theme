@@ -178,7 +178,7 @@ function idt_attach_post_types_and_taxonomies() {
 add_action( 'init', 'idt_attach_post_types_and_taxonomies', 0 );
 
 /**
- * Transliterate cyrilic characters to latin ones in post permalinks
+ * Transliterate cyrillic characters to latin ones in post permalinks
  */
 require IDT_THEME_DIR . '/inc/transliterate-permalinks.php';
 

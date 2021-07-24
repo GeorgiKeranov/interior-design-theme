@@ -37,7 +37,7 @@ add_action( 'wp_insert_post_data', 'crb_cyrllic_alphabets_to_latin_in_post_perma
 /**
  * Replace all the cyrllic characters with latin ones
  */
-function crb_transliterate_cyrlic_to_latin( $cyrilic_text ) {
+function crb_transliterate_cyrlic_to_latin( $cyrillic_text ) {
 	$translations_of_alphabets = array(
 		"а"=>"a", "б"=>"b", "в"=>"v", "г"=>"g", "д"=>"d", 
 		"е"=>"e", "ж"=>"zh", "з"=>"z", "и"=>"i", "й"=>"y", 
@@ -53,7 +53,7 @@ function crb_transliterate_cyrlic_to_latin( $cyrilic_text ) {
 		"Щ"=>"sht", "Ъ"=>"a", "Ь"=>"y", "Ю"=>"yu", "Я"=>"ya"
 	);
 
-	$latin_text = strtr( $cyrilic_text, $translations_of_alphabets );
+	$latin_text = strtr( $cyrillic_text, $translations_of_alphabets );
 
 	return $latin_text;
 }

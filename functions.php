@@ -30,9 +30,7 @@ if ( ! function_exists( 'idt_setup' ) ) :
 		require_once( 'vendor/autoload.php' );
 		\Carbon_Fields\Carbon_Fields::boot();
 
-		/**
-		 * Add custom options like template fields and global theme fields to the theme
-		 */
+		// Add custom field options to the theme
 		function idt_add_custom_options_to_theme() {
 			include_once(IDT_THEME_DIR . '/custom-options/post-meta.php');
 		}
@@ -169,6 +167,20 @@ function idt_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'idt_scripts' );
+
+/**
+ * Attach Custom Post Types and Custom Taxonomies
+ */
+function idt_attach_post_types_and_taxonomies() {
+	include_once( IDT_THEME_DIR . '/custom-options/post-types.php' );
+	// include_once( IDT_THEME_DIR . '/custom-options/taxonomies.php' );
+}
+add_action( 'init', 'idt_attach_post_types_and_taxonomies', 0 );
+
+/**
+ * Transliterate cyrilic characters to latin ones in post permalinks
+ */
+require IDT_THEME_DIR . '/inc/transliterate-permalinks.php';
 
 /**
  * Implement the Custom Header feature.

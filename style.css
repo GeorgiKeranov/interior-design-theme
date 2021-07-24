@@ -824,7 +824,7 @@ textarea {
 	display: block;
 	width: 120px;
 	height: 94px;
-	background-image: url(images/logo.jpg);
+	background-image: url(images/logo.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	transition: opacity .5s;
@@ -839,6 +839,7 @@ textarea {
 .header {
 	position: sticky;
 	top: 0;
+	z-index: 100;
 	transition: height 1s ease;
 	background-color: white;
 	padding: 7px 0;
@@ -869,7 +870,7 @@ textarea {
 	height: 20px;
 	background-color: #000;
 	border-radius: 50%;
-	transition: opacity .5s;
+	transition: opacity .3s;
 }
 
 .header .dot:hover {
@@ -888,10 +889,115 @@ textarea {
 	opacity: 1;
 }
 
-/* Header
+/* Admin
 --------------------------------------------- */
 .admin-bar .header {
 	top: 32px;
+}
+
+/* Icon
+--------------------------------------------- */
+.section-projects {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -2px;
+	position: relative;
+}
+
+.section-projects .section__project {
+	position: relative;
+	width: 25%;
+	padding: 2px;
+}
+
+.section-projects .section__project > a {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.section-projects .section__thumbnail {
+	position: relative;
+	padding-top: 100%;
+	overflow: hidden;
+}
+
+.section-projects .section__thumbnail img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: transform 4s ease-out;
+}
+
+.section-projects .section__thumbnail:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(48, 48, 48, 0.67);
+	opacity: 0;
+	transition: opacity .35s linear;
+}
+
+.section-projects .section__view-project {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	opacity: 0;
+	transition: opacity 0.35s, bottom 0.35s, transform 0.4s;
+}
+
+.section-projects .section__view-project a {
+	display: flex;
+	align-items: center;
+	color: white;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 5px 0;
+}
+
+.section-projects .section__view-project a:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	top: 100%;
+	background-color: white;
+	transition: width .4s ease;
+}
+
+.section-projects .section__view-project a:hover:after {
+	width: 100%;
+}
+
+.section-projects .section__view-project a svg {
+	margin-left: 4px;
+	width: 5px;
+}
+
+.section-projects .section__project:hover .section__thumbnail img {
+	transform: scale(1.2);
+}
+
+.section-projects .section__project:hover .section__thumbnail:after {
+	opacity: 1;
+}
+
+.section-projects .section__project:hover .section__view-project {
+	opacity: 1;
+	transform: translate(-50%, -51%) translateZ(0);
 }
 
 /*--------------------------------------------------------------

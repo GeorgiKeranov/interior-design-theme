@@ -112,6 +112,8 @@ if ( ! function_exists( 'idt_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		add_image_size( 'medium_large_fixed', '768', '768', true );
 	}
 endif;
 add_action( 'after_setup_theme', 'idt_setup' );

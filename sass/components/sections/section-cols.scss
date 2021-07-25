@@ -1,0 +1,9 @@
+.section-cols {
+	display: flex;
+}
+
+.section-cols--two {
+	.section__col {
+		width: 50%;
+	}
+}

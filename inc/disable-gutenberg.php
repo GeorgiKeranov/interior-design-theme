@@ -10,17 +10,14 @@ function idt_disable_editor( $id = false ) {
 		'templates/page-builder.php',
 	);
 
-	$excluded_ids = array(
-		
-	);
-
-	if( empty( $id ) )
+	if( empty( $id ) ) {
 		return false;
+	}
 
 	$id = intval( $id );
 	$template = get_page_template_slug( $id );
 
-	return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
+	return in_array( $template, $excluded_templates );
 }
 
 /**
@@ -29,11 +26,13 @@ function idt_disable_editor( $id = false ) {
  */
 function idt_disable_gutenberg( $can_edit, $post_type ) {
 
-	if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
+	if( ! ( is_admin() && !empty( $_GET['post'] ) ) ) {
 		return $can_edit;
+	}
 
-	if( idt_disable_editor( $_GET['post'] ) )
+	if( idt_disable_editor( $_GET['post'] ) ) {
 		$can_edit = false;
+	}
 
 	return $can_edit;
 

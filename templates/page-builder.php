@@ -18,6 +18,8 @@ foreach ( $sections as $section ) {
 	 */
 	unset( $section['_type'] );
 
+	$section = array_filter( $section );
+
 	get_template_part( $template_path, null, $section );
 }
 

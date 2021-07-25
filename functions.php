@@ -207,6 +207,11 @@ require IDT_THEME_DIR . '/inc/customizer.php';
 require IDT_THEME_DIR . '/inc/disable-gutenberg.php';
 
 /**
+ * Disable classic editor for certain templates
+ */
+require IDT_THEME_DIR . '/inc/disable-classic-editor.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

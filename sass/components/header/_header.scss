@@ -3,7 +3,7 @@
 	top: 0;
 	z-index: 100;
 	transition: height 1s ease;
-	background-color: white;
+	background: hsla(0,0%,100%,.9);
 	padding: 7px 0;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
 
@@ -22,27 +22,27 @@
 		flex: 1 1 0%;
 	}
 
-	.dot {
-		@include element-with-animation-hide;
-		display: block;
-		width: 20px;
-		height: 20px;
-		background-color: #000;
-		border-radius: 50%;
-		transition: opacity .3s;
+	// .dot {
+	// 	@include element-with-animation-hide;
+	// 	display: block;
+	// 	width: 20px;
+	// 	height: 20px;
+	// 	background-color: #000;
+	// 	border-radius: 50%;
+	// 	transition: opacity .3s;
 
-		&:hover {
-			opacity: .4;
-		}
-	}
+	// 	&:hover {
+	// 		opacity: .4;
+	// 	}
+	// }
 }
 
-.header--scroll {
-	.logo {
-		@include element-with-animation-hide;
-	}
+// .header--scroll {
+// 	.logo {
+// 		@include element-with-animation-hide;
+// 	}
 
-	.dot {
-		@include element-with-animation-show;
-	}
-}
+// 	.dot {
+// 		@include element-with-animation-show;
+// 	}
+// }

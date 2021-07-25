@@ -49,7 +49,7 @@
 				<div class="header__center">
 					<a href="<?php echo home_url('/') ?>" class="logo"></a>
 
-					<a href="<?php echo home_url('/') ?>" class="dot"></a>
+					<!-- <a href="?php echo home_url('/') ?>" class="dot"></a> -->
 				</div><!-- /.header__center -->
 
 				<div class="header__right">

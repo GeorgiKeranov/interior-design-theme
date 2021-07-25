@@ -4,7 +4,7 @@
  * Templates and Page IDs without editor
  *
  */
-function ea_disable_editor( $id = false ) {
+function idt_disable_editor( $id = false ) {
 
 	$excluded_templates = array(
 		'templates/page-builder.php',
@@ -27,16 +27,16 @@ function ea_disable_editor( $id = false ) {
  * Disable Gutenberg by template
  *
  */
-function ea_disable_gutenberg( $can_edit, $post_type ) {
+function idt_disable_gutenberg( $can_edit, $post_type ) {
 
 	if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
 		return $can_edit;
 
-	if( ea_disable_editor( $_GET['post'] ) )
+	if( idt_disable_editor( $_GET['post'] ) )
 		$can_edit = false;
 
 	return $can_edit;
 
 }
-add_filter( 'gutenberg_can_edit_post_type', 'ea_disable_gutenberg', 10, 2 );
-add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
+add_filter( 'gutenberg_can_edit_post_type', 'idt_disable_gutenberg', 10, 2 );
+add_filter( 'use_block_editor_for_post_type', 'idt_disable_gutenberg', 10, 2 );

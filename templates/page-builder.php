@@ -18,7 +18,17 @@ foreach ( $sections as $section ) {
 	 */
 	unset( $section['_type'] );
 
+	/**
+	 * Remove empty fields from array so we can check if there are any filled fields
+	 */
 	$section = array_filter( $section );
+
+	/**
+	 * Do not import the section in the page if all of the fields for it are empty
+	 */
+	if ( empty( $section ) ) {
+		continue;
+	}
 
 	get_template_part( $template_path, null, $section );
 }

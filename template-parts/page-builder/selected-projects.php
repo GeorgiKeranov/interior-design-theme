@@ -1,10 +1,4 @@
-<?php
-if ( empty( $args['idt_selected_projects'] ) ) {
-	return;
-}
-
-$projects = $args['idt_selected_projects'];
-?>
+<?php $projects = $args['idt_selected_projects']; ?>
 
 <section class="section-projects">
 	<div class="section__content">

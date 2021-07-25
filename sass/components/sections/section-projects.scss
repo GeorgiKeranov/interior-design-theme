@@ -1,8 +1,10 @@
 .section-projects {
-	display: flex;
-	flex-wrap: wrap;
-	margin: -2px;
-	position: relative;
+	.section__content {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -2px;
+		position: relative;
+	}
 
 	.section__project {
 		position: relative;
@@ -102,5 +104,10 @@
 			opacity: 1;
 			transform: translate(-50%, -51%) translateZ(0);
 		}
+	}
+
+	.section__cta {
+		margin: 30px 0;
+		text-align: center;
 	}
 }

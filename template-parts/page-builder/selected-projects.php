@@ -17,7 +17,7 @@
 				<a href="<?php echo $project_permalink ?>"></a>
 
 				<div class="section__view-project">
-					<a href="<?php echo $project_permalink ?>"><?php _e( 'Виж проект', 'idt' ) ?> <?php echo file_get_contents( get_template_directory_uri() . '/images/icon-arrow-right.svg' ) ?></a>
+					<a href="<?php echo $project_permalink ?>"><?php _e( 'Виж проект', 'idt' ) ?> <?php echo idt_load_svg('icon-arrow-right') ?></a>
 				</div><!-- /.section__view-project -->
 			</div><!-- /.section__project -->
 		<?php endforeach; ?>

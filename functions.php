@@ -177,6 +177,11 @@ function idt_attach_post_types_and_taxonomies() {
 add_action( 'init', 'idt_attach_post_types_and_taxonomies', 0 );
 
 /**
+ * Load static svg icons from the project
+ */
+require IDT_THEME_DIR . '/inc/load-svg-icon.php';
+
+/**
  * Transliterate cyrillic characters to latin ones in post permalinks
  */
 require IDT_THEME_DIR . '/inc/transliterate-permalinks.php';

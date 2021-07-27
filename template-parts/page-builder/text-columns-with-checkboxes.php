@@ -8,7 +8,7 @@
 			<?php endif; ?>
 
 			<div class="section-cols section-cols--three">
-				<?php $check_svg = file_get_contents( get_template_directory_uri() . '/images/icon-check.svg' ); ?>
+				<?php $check_svg = idt_load_svg('icon-check') ?>
 
 				<div class="section__col">
 					<?php if ( !empty( $args['title_left'] ) ) : ?>

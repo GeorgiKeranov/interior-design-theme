@@ -52,4 +52,14 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 					->set_width( 33 ),
 				Field::make( 'rich_text', 'text_bottom', __( 'Текст отдолу', 'idt' ) ),
 			) )
+
+			/**
+			 * Text With Image
+			 */
+			->add_fields( 'text-with-image', __( 'Текст със снимка', 'idt' ), array(
+				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) )
+					->set_width( 50 ),
+				Field::make( 'image', 'image', __( 'Снимка', 'idt' ) )
+					->set_width( 50 ),
+			) )
 	) );

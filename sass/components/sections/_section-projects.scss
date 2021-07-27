@@ -66,21 +66,7 @@
 			text-decoration: none;
 			padding: 5px 0;
 
-			&:after {
-				content: '';
-				position: absolute;
-				left: 0;
-				right: 0;
-				width: 0;
-				height: 2px;
-				top: 100%;
-				background-color: white;
-				transition: width .4s ease;
-			}
-
-			&:hover:after {
-				width: 100%;
-			}
+			@include anchor-hover-effect(white);
 
 			svg {
 				margin-left: 4px;

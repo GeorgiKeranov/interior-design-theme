@@ -21,3 +21,23 @@
 	visibility: visible;
 	opacity: 1;
 }
+
+@mixin anchor-hover-effect($color: #333, $transition: .4s ease) {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 0;
+		height: 2px;
+		top: 100%;
+		background-color: $color;
+		transition: width $transition;
+		-webkit-transform: translateZ(0);
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+}

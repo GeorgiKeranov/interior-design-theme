@@ -12,21 +12,77 @@
 ?>
 	</main><!-- /.main -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'idt' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'idt' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'idt' ), 'idt', '<a href="https://github.com/GeorgiKeranov">Georgi Keranov</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__main">
+				<div class="footer__logo">
+					<a href="<?php echo home_url('/') ?>" class="logo logo--white"></a>
+				</div><!-- /.footer__logo -->
+
+				<div class="footer__menu">
+					<nav class="nav-footer">
+						<ul>
+							<li>
+								<a href="#">Проекти</a>
+							</li>
+
+							<li>
+								<a href="#">Услуги</a>
+							</li>
+
+							<li>
+								<a href="#">Планиране</a>
+							</li>
+
+							<li>
+								<a href="#">За Нас</a>
+							</li>
+
+							<li>
+								<a href="#">Блог</a>
+							</li>
+
+							<li>
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+					</nav>
+				</div><!-- /.footer__menu -->
+
+				<div class="footer__contacts">
+					<ul>
+						<li>
+							<a href="tel:359123456789"><?php echo idt_load_svg('icon-phone') ?> +359 123 456 789</a>
+						</li>
+
+						<li>
+							<a href="mailto:radoslava_design@gmail.com"><?php echo idt_load_svg('icon-mail') ?> radoslava_design@gmail.com</a>
+						</li>
+					</ul>
+				</div><!-- /.footer__contacts -->
+
+				<div class="footer__socials">
+					<ul>
+						<li>
+							<a href="https://www.facebook.com"><?php echo idt_load_svg('icon-facebook') ?></a>
+						</li>
+
+						<li>
+							<a href="https://www.instagram.com"><?php echo idt_load_svg('icon-instagram') ?></a>
+						</li>
+
+						<li>
+							<a href="https://www.youtube.com"><?php echo idt_load_svg('icon-youtube') ?></a>
+						</li>
+					</ul><!-- /.socials -->
+				</div><!-- /.footer__socials -->
+			</div><!-- /.footer__main -->
+
+			<div class="footer__bottom">
+				<p class="copyright">©Radoslava Design. Всички права запазени.</p>
+			</div><!-- /.footer__bottom -->
+		</div><!-- /.container -->
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

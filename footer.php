@@ -79,7 +79,7 @@
 			</div><!-- /.footer__main -->
 
 			<div class="footer__bottom">
-				<p class="copyright">©Radoslava Design. Всички права запазени.</p>
+				<p class="copyright">© Radoslava Design. Всички права запазени.</p>
 			</div><!-- /.footer__bottom -->
 		</div><!-- /.container -->
 	</footer>

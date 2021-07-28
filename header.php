@@ -69,6 +69,44 @@
 						</ul>
 					</nav><!-- /.nav -->
 				</div><!-- /.header__right -->
+
+				<div class="header__menu-mobile">
+					<div class="header__menu-toggle">
+						<div></div>
+
+						<div></div>
+
+						<div></div>
+					</div><!-- /.header__menu-toggle -->
+
+					<nav class="nav-mobile">
+						<ul>
+							<li>
+								<a href="#">Проекти</a>
+							</li>
+
+							<li>
+								<a href="#">Услуги</a>
+							</li>
+
+							<li>
+								<a href="#">Планиране</a>
+							</li>
+
+							<li>
+								<a href="#">За Нас</a>
+							</li>
+
+							<li>
+								<a href="#">Блог</a>
+							</li>
+
+							<li>
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+					</nav><!-- /.nav-mobile -->
+				</div><!-- /.header__menu-mobile -->
 			</div><!-- /.header__inner -->
 		</div><!-- /.container -->
 	</header><!-- /.header -->

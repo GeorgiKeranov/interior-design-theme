@@ -2,4 +2,14 @@
 	.header {
 		top: 32px;
 	}
+
+	@media (max-width: 782px) {
+		.header {
+			top: 46px;
+
+			.nav-mobile {
+				padding-top: 138px;
+			}
+		}
+	}
 }

@@ -63,3 +63,54 @@
 		@include anchor-hover-effect(white);
 	}
 }
+
+.nav-mobile {
+	display: none;
+
+	@include resolution(tablet-portrait) {
+		display: block;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		padding: 92px 15px;
+		opacity: 0;
+		visibility: hidden;
+		transition: .3s;
+		overflow-x: auto;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		list-style-type: none;
+		padding-left: 0;
+		margin: 0;
+		text-align: center;
+		
+		li {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+
+	a {
+		display: inline-block;
+		margin: 0 auto;
+		color: $color__text-navigation;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $font__headings;
+		font-size: 25px;
+		font-weight: 700;
+
+		@include anchor-hover-effect();
+	}
+}

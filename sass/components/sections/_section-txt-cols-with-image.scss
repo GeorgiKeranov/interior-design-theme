@@ -10,4 +10,8 @@
 	p:last-child {
 		margin-bottom: 0;
 	}
+
+	@include resolution(desktop-small) {
+		padding: 30px 0;
+	}
 }

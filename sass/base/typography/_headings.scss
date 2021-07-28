@@ -6,6 +6,7 @@ h5,
 h6 {
 	clear: both;
 	margin-top: 0;
+	font-family: $font__headings;
 }
 
 h1 {
@@ -16,4 +17,14 @@ h1 {
 h2 {
 	font-size: 28px;
 	line-height: 1.14em;
+}
+
+@include resolution(desktop-small) {
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
 }

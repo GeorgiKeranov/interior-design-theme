@@ -2,7 +2,6 @@
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	transition: height 1s ease;
 	background: hsla(0,0%,100%,.9);
 	padding: 7px 0;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
@@ -35,6 +34,15 @@
 	// 		opacity: .4;
 	// 	}
 	// }
+
+	@include resolution(desktop-small) {
+		padding: 4px 0;
+
+		.logo {
+			width: 102px;
+			height: 80px;
+		}
+	}
 }
 
 // .header--scroll {

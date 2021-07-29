@@ -15,4 +15,13 @@
 	@include resolution(desktop-small) {
 		padding: 30px 0;
 	}
+
+	@include resolution(mobile) {
+		background-image: none !important;
+		background-color: #ddd;
+
+		h1 {
+			text-align: center;
+		}
+	}
 }

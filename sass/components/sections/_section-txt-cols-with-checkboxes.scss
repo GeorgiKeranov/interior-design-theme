@@ -21,4 +21,10 @@
 			margin-bottom: 0;
 		}
 	}
+
+	@include resolution(mobile) {
+		h2, p {
+			margin-bottom: 21px;
+		}	
+	}
 }

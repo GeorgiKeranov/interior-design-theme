@@ -6,4 +6,17 @@
 	.section-cols {
 		align-items: center;
 	}
+
+	@include resolution(tablet-portrait) {
+		.section__col:nth-child(2) {
+			text-align: center;
+		}
+	}
+
+	@include resolution(mobile) {
+		.section__col:nth-child(2) {
+			order: -1;
+			margin-bottom: 20px;
+		}
+	}
 }

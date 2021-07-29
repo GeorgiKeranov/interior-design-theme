@@ -107,6 +107,7 @@
 		.footer__contacts {
 			display: flex;
 			align-items: center;
+			justify-content: center;
 
 			a {
 				justify-content: center;
@@ -120,6 +121,33 @@
 
 		.footer__bottom {
 			padding-top: 30px;
+		}
+	}
+
+	@include resolution(mobile) {
+		.footer__menu,
+		.footer__contacts {
+			width: 100%;
+		}
+
+		.footer__main {
+			padding-bottom: 10px;
+		}
+
+		.footer__menu {
+			margin-bottom: 10px;
+		}
+
+		.footer__contacts {
+			ul {
+				margin-bottom: 0;
+			}
+		}
+
+		.footer__bottom {
+			.copyright {
+				font-size: 15px;
+			}
 		}
 	}
 }

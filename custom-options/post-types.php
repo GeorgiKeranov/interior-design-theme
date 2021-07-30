@@ -26,5 +26,5 @@ register_post_type( 'idt_project', array(
 	),
 	'query_var'             => true,
 	'menu_icon'             => 'dashicons-admin-multisite',
-	'supports'              => array( 'title', 'thumbnail' ),
+	'supports'              => array( 'title', 'thumbnail', 'editor' ),
 ) );

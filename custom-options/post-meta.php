@@ -63,3 +63,14 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 					->set_width( 50 ),
 			) )
 	) );
+
+
+/**
+ * Single Project
+ */
+Container::make( 'post_meta', __( 'Настройки', 'idt' ) )
+	->where( 'post_type', '=', 'idt_project' )
+	->add_fields( array(
+		Field::make( 'media_gallery', 'idt_gallery', __( 'Галерия', 'idt' ) )
+		    ->set_type( array( 'image' ) )
+	) );

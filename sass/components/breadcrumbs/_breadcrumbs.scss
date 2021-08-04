@@ -1,0 +1,17 @@
+.breadcrumbs {
+	padding: 15px 0;
+	
+	a {
+		color: $color__text-main;
+		font-size: 13px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	span {
+		display: inline-block;
+		margin: 0 4px;
+	}
+}

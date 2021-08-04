@@ -15,6 +15,7 @@ register_post_type( 'idt_project', array(
 		'not_found_in_trash' => __( 'Не са намерени проекти в кошчето', 'crb' ),
 	),
 	'public'                => true,
+	'has_archive'           => 'projects',
 	'exclude_from_search'   => false,
 	'show_ui'               => true,
 	'capability_type'       => 'post',

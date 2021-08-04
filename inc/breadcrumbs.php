@@ -80,7 +80,7 @@ function idt_the_breadcrumbs() {
 	
 	foreach ( $pages as $index => $page ) {
 		if ( $index > 0 ) {
-			$html .= ' / ';
+			$html .= ' <span>/</span> ';
 		}
 
 		if ( empty( $page['link'] ) ) {

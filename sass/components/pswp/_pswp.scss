@@ -1,0 +1,13 @@
+.pswp {
+	z-index: 100000;
+
+	.pswp__bg {
+		background-color: rgba(0, 0, 0, 0.85);
+	}
+
+	.pswp__ui {
+		.pswp__top-bar {
+			background-color: #000;
+		}
+	}
+}

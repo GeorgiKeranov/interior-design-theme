@@ -1,4 +1,4 @@
-<div class="section-other-projects">
+<div class="section-related-projects">
 	<div class="container">
 		<h2></h2>
 
@@ -18,4 +18,4 @@
 			</div><!-- /.section-cols section-cols--three -->
 		</div><!-- /.section__projects -->
 	</div><!-- /.container -->
-</div><!-- /.section-other-projects -->
+</div><!-- /.section-related-projects -->

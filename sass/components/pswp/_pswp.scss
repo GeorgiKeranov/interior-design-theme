@@ -10,4 +10,45 @@
 			background-color: #000;
 		}
 	}
+
+	.pswp__ui--idle {
+		.pswp__button--arrow--left,
+		.pswp__button--arrow--right,
+		.pswp__top-bar {
+			opacity: 1;
+		}
+	}
+
+	.pswp__button--arrow--left,
+	.pswp__button--arrow--right {
+		width: auto;
+		height: auto;
+		margin: 0;
+		transform: translateY(-50%);
+	}
+
+	.pswp__button--arrow--left {
+		margin-left: 10px;
+	}
+
+	.pswp__button--arrow--right {
+		margin-right: 10px;
+	}
+
+	.pswp__button--arrow--left:before,
+	.pswp__button--arrow--right:before {
+		position: static;
+		background: none;
+		font-size: 80px;
+		color: #fff;
+	}
+
+	.pswp__button--arrow--left:before {
+		content: '🠔';
+	}
+
+	.pswp__button--arrow--right:before {
+		content: '🠖';
+	}
+
 }

@@ -181,12 +181,17 @@ add_action( 'wp_enqueue_scripts', 'idt_scripts' );
  */
 function idt_attach_post_types_and_taxonomies() {
 	include_once( IDT_THEME_DIR . '/custom-options/post-types.php' );
-	// include_once( IDT_THEME_DIR . '/custom-options/taxonomies.php' );
+	include_once( IDT_THEME_DIR . '/custom-options/taxonomies.php' );
 }
 add_action( 'init', 'idt_attach_post_types_and_taxonomies', 0 );
 
 /**
- * 
+ * Loads related posts by selected terms or just random posts in the selected post type
+ */
+require IDT_THEME_DIR . '/inc/related-posts.php';
+
+/**
+ * Prints html with hierarchy parent pages for current "page" or "single post" or "archive page"
  */
 require IDT_THEME_DIR . '/inc/breadcrumbs.php';
 

@@ -52,4 +52,24 @@
 			opacity: 1;
 		}
 	}
+
+	@include resolution(tablet-portrait) {
+		figure {
+			width: 25%;
+		}
+	}
+
+	@include resolution(mobile) {
+		margin-bottom: 40px;
+
+		figure {
+			width: 33.33%;
+		}
+	}
+
+	@include resolution(mobile-portrait) {
+		figure {
+			width: 50%;
+		}
+	}
 }

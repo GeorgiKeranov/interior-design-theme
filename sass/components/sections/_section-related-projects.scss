@@ -80,4 +80,30 @@
 			text-transform: uppercase;
 		}
 	}
+
+	@include resolution(tablet-portrait) {
+		.section__col {
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+		}
+
+		.section__image {
+			margin-bottom: 10px;
+			padding-right: 0;
+		}
+
+		.section__details {
+			width: 100%;
+
+			h3 {
+				margin-bottom: 6px;
+			}
+		}
+	}
+
+	@include resolution(mobile) {
+		padding-bottom: 0;
+		margin-bottom: 30px;
+	}
 }

@@ -177,13 +177,14 @@ function idt_scripts() {
 add_action( 'wp_enqueue_scripts', 'idt_scripts' );
 
 /**
- * Attach Custom Post Types and Custom Taxonomies
+ * Attach custom options for the theme
  */
-function idt_attach_post_types_and_taxonomies() {
+function idt_custom_options() {
 	include_once( IDT_THEME_DIR . '/custom-options/post-types.php' );
 	include_once( IDT_THEME_DIR . '/custom-options/taxonomies.php' );
+	include_once( IDT_THEME_DIR . '/custom-options/shortcodes.php' );
 }
-add_action( 'init', 'idt_attach_post_types_and_taxonomies', 0 );
+add_action( 'init', 'idt_custom_options', 0 );
 
 /**
  * Loads related posts by selected terms or just random posts in the selected post type

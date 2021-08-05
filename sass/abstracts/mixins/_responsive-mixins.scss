@@ -19,4 +19,9 @@
 			@content;
 		}
 	}
+	@else if $device == desktop {
+		@media (max-width: 1500px) {
+			@content;
+		}
+	}
 }

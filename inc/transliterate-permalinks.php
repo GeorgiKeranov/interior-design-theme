@@ -3,7 +3,7 @@
 /**
  * Replace all cyrillic characters in post permalink with latin characters
  */
-function crb_cyrllic_alphabets_to_latin_in_post_permalink( $data ) {
+function idt_cyrllic_alphabets_to_latin_in_post_permalink( $data ) {
 	// If the post is not published do not change the permalink
 	if ( $data['post_status'] !== 'publish' ) {
 		return $data;
@@ -20,7 +20,7 @@ function crb_cyrllic_alphabets_to_latin_in_post_permalink( $data ) {
 	$post_type = get_post_type();
 
 	// Replace all the cyrllic characters with latin ones
-	$post_name_latin = crb_transliterate_cyrlic_to_latin( $post_title );
+	$post_name_latin = idt_transliterate_cyrlic_to_latin( $post_title );
 
 	// Replace space characters with '-'
 	$post_name_latin = sanitize_title( $post_name_latin );
@@ -32,12 +32,12 @@ function crb_cyrllic_alphabets_to_latin_in_post_permalink( $data ) {
 
 	return $data;
 }
-add_action( 'wp_insert_post_data', 'crb_cyrllic_alphabets_to_latin_in_post_permalink', 20, 3 );
+add_action( 'wp_insert_post_data', 'idt_cyrllic_alphabets_to_latin_in_post_permalink', 20, 3 );
 
 /**
  * Replace all the cyrllic characters with latin ones
  */
-function crb_transliterate_cyrlic_to_latin( $cyrillic_text ) {
+function idt_transliterate_cyrlic_to_latin( $cyrillic_text ) {
 	$translations_of_alphabets = array(
 		"а"=>"a", "б"=>"b", "в"=>"v", "г"=>"g", "д"=>"d", 
 		"е"=>"e", "ж"=>"zh", "з"=>"z", "и"=>"i", "й"=>"y", 

@@ -3,8 +3,8 @@
 /**
  * Disable classic editor from templates that do not use it
  */
-add_action( 'admin_init', 'crb_remove_default_editor_from_templates', 10 );
-function crb_remove_default_editor_from_templates() {
+add_action( 'admin_init', 'idt_remove_default_editor_from_templates', 10 );
+function idt_remove_default_editor_from_templates() {
 
 	if ( empty( $_GET['post'] ) ) {
 		return;

@@ -16,6 +16,17 @@
 		}
 	}
 
+	h4 {
+		margin-bottom: 10px;
+	}
+
+	img {
+		margin-bottom: 30px;
+		margin: 0 auto;
+		width: auto;
+		max-height: 200px; 
+	}
+
 	.section__bottom {
 		p:last-child {
 			margin-bottom: 0;
@@ -25,6 +36,18 @@
 	@include resolution(mobile) {
 		h2, p {
 			margin-bottom: 21px;
-		}	
+		}
+
+		.section__bottom {
+			margin-top: 30px;
+		}
+
+		.section__images {
+			text-align: center;
+
+			.section__col {
+				margin-bottom: 15px;
+			}
+		}
 	}
 }

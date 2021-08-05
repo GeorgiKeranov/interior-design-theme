@@ -51,6 +51,61 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 				Field::make( 'textarea', 'text_right', __( 'Текст в дясна колона', 'idt' ) )
 					->set_width( 33 ),
 				Field::make( 'rich_text', 'text_bottom', __( 'Текст отдолу', 'idt' ) ),
+				Field::make( 'checkbox', 'add_image_cols', __( 'Добави колони със снимки', 'idt' ) ),
+				Field::make( 'image', 'image_left', __( 'Снимка в лява колона', 'idt' ) )
+					->set_width( 33 )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'add_image_cols',
+							'value' => true,
+							'compare' => '='
+						)
+					) ),
+				Field::make( 'image', 'image_center', __( 'Снимка в централна колона', 'idt' ) )
+					->set_width( 33 )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'add_image_cols',
+							'value' => true,
+							'compare' => '='
+						)
+					) ),
+				Field::make( 'image', 'image_right', __( 'Снимка в дясна колона', 'idt' ) )
+					->set_width( 33 )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'add_image_cols',
+							'value' => true,
+							'compare' => '='
+						)
+					) ),
+				Field::make( 'rich_text', 'image_text_left', __( 'Текст под снимка в лява колона', 'idt' ) )
+					->set_width( 33 )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'add_image_cols',
+							'value' => true,
+							'compare' => '='
+						)
+					) ),
+				Field::make( 'rich_text', 'image_text_center', __( 'Текст под снимка в централна колона', 'idt' ) )
+					->set_width( 33 )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'add_image_cols',
+							'value' => true,
+							'compare' => '='
+						)
+					) ),
+				Field::make( 'rich_text', 'image_text_right', __( 'Текст под снимка в дясна колона', 'idt' ) )
+					->set_width( 33 )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'add_image_cols',
+							'value' => true,
+							'compare' => '='
+						)
+					) ),
 			) )
 
 			/**

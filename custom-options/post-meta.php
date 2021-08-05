@@ -62,6 +62,19 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 				Field::make( 'image', 'image', __( 'Снимка', 'idt' ) )
 					->set_width( 50 ),
 			) )
+
+			/**
+			 * Text With Wide Image
+			 */
+			->add_fields( 'text-with-wide-image', __( 'Текст със широка снимка', 'idt' ), array(
+				Field::make( 'checkbox', 'add_breadcrumbs', __( 'Добави линкове за страници' ) ),
+				Field::make( 'checkbox', 'swap_columns', __( 'Размени колоните на текста и снимката', 'idt' ) ),
+				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) )
+					->set_width( 50 ),
+				Field::make( 'image', 'image', __( 'Снимка', 'idt' ) )
+					->set_width( 50 )
+					->set_required( true ),
+			) )
 	) );
 
 

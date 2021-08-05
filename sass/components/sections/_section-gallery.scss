@@ -1,5 +1,6 @@
 .section-gallery {
 	overflow: hidden;
+	margin-bottom: 60px;
 
 	.section__columns {
 		display: flex;
@@ -26,7 +27,7 @@
 			top: 0;
 			right: 0;
 			bottom: 0;
-			background: rgba(53, 53, 53, 0.5);
+			background: $color__image-overlay;
 			opacity: 0;
 			transition: .3s opacity;
 		}

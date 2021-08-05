@@ -21,14 +21,12 @@ if ( empty( $related_projects ) ) {
 					<div class="section__col">
 						<?php if ( !empty( $thumbnail_id ) ) : ?>
 							<div class="section__image">
-								<a href="<?php echo $permalink ?>">
-									<?php echo wp_get_attachment_image( $thumbnail_id ) ?>
-								</a>
+								<a href="<?php echo $permalink ?>" style="background-image: url(<?php echo wp_get_attachment_image_url( $thumbnail_id ) ?>)"></a>
 							</div><!-- /.section__image -->
 						<?php endif; ?>
 
 						<div class="section__details">
-							<p><a href="<?php echo $permalink ?>"><?php echo esc_html( $title ) ?></a></p>
+							<h3><a href="<?php echo $permalink ?>"><?php echo esc_html( $title ) ?></a></h3>
 
 							<p><a href="<?php echo $permalink ?>"><?php echo $date_created ?></a></p>
 						</div><!-- /.section__details -->

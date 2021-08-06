@@ -52,7 +52,7 @@
 				<div class="footer__contacts">
 					<ul>
 						<li>
-							<a href="tel:359123456789"><?php echo idt_get_svg('icon-phone') ?> +359 123 456 789</a>
+							<a href="tel:359123456789"><?php echo idt_get_svg('icon-phone') ?> +359 12 345 6789</a>
 						</li>
 
 						<li>

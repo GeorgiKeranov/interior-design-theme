@@ -54,6 +54,7 @@
 @import "sections/section-txt-cols-with-checkboxes";
 @import "sections/section-txt-with-img";
 @import "sections/section-txt-with-wide-img";
+@import "sections/section-txt-with-form";
 @import "sections/section-content";
 @import "sections/section-gallery";
 @import "sections/section-related-projects";
@@ -61,6 +62,10 @@
 /* PSWP
 --------------------------------------------- */
 @import "pswp/pswp";
+
+/* Forms
+--------------------------------------------- */
+@import "forms/wpforms-form";
 
 /* Breadcrumbs
 --------------------------------------------- */

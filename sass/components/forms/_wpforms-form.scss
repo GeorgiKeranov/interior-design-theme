@@ -1,0 +1,163 @@
+form.wpforms-form {
+	div.wpforms-field-container {
+		overflow: hidden;
+
+		.wpforms-field {
+			padding: 0;
+			margin-bottom: 20px;
+
+			.wpforms-field-label {
+				display: none;
+			}
+
+			input[type=date],
+			input[type=datetime],
+			input[type=datetime-local],
+			input[type=email],
+			input[type=month],
+			input[type=number],
+			input[type=password],
+			input[type=range],
+			input[type=search],
+			input[type=tel],
+			input[type=text],
+			input[type=time],
+			input[type=url],
+			input[type=week],
+			select,
+			textarea {
+				border: 0;
+				border-bottom: 2px solid $color__form-border;
+				height: auto;
+				padding: 10px 0;
+				font-size: 18px;
+				color: $color__text-main;
+
+				&::placeholder {
+					color: $color__text-placeholder;
+				}
+			}
+
+			textarea {
+				height: 140px;
+				resize: none;
+			}
+		}
+
+		div.wpforms-has-error {
+			input[type=date],
+			input[type=datetime],
+			input[type=datetime-local],
+			input[type=email],
+			input[type=month],
+			input[type=number],
+			input[type=password],
+			input[type=range],
+			input[type=search],
+			input[type=tel],
+			input[type=text],
+			input[type=time],
+			input[type=url],
+			input[type=week],
+			select,
+			textarea {
+				border-color: $color__form-error;
+			}
+
+			textarea.wpforms-error {
+				border: 0;
+				border-bottom: 2px solid $color__form-error;
+			}
+		}
+
+		label.wpforms-error.mailcheck-error {
+			display: none;
+		}
+
+		div.wpforms-column {
+			width: calc(50% - 10px);
+			float: left;
+			clear: none;
+		}
+
+		div.wpforms-column--space {
+			margin-right: 20px;
+		}
+	}
+
+	div.wpforms-submit-container {
+		text-align: center;
+
+		button[type=submit] {
+			width: 100%;
+			background-color: $color__form-border;
+			border: 2px solid $color__form-border;
+			color: white;
+			padding: 15px;
+			font-size: 21px;
+			font-weight: 700;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			transition: .3s background-color, .3s color;
+
+			&:hover {
+				border: 2px solid $color__form-border;
+				background-color: white;
+				color: $color__form-border;
+				opacity: 1;
+			}
+		}
+
+		button[type=submit]:disabled {
+			background-color: $color__form-border;
+			border: 2px solid $color__form-border;
+			transition: none;
+			color: white;
+		}
+
+		.wpforms-submit-spinner {
+			margin: 10px 0 0;
+		}
+	}
+
+	@include resolution(mobile-portrait) {
+		div.wpforms-field-container {
+			div.wpforms-column {
+				width: 100%;
+				float: none;
+			}
+
+			div.wpforms-column--space {
+				margin-right: 0;
+			}
+		}
+
+		div.wpforms-submit-container {
+			button[type=submit] {
+				font-size: 17px;
+			}
+		}
+	}
+}
+
+div.wpforms-container-full {
+	margin-bottom: 0 !important;
+}
+
+div.wpforms-confirmation-container-full {
+	margin: 0;
+	background: none;
+	border: 0;
+
+	p {
+		font-size: 32px;
+		text-align: center;
+	}
+
+	@include resolution(mobile-portrait) {
+		p {
+			font-size: 26px;
+			line-height: 1.5;
+		}
+	}
+}

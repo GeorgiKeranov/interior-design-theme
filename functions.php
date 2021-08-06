@@ -187,6 +187,11 @@ function idt_custom_options() {
 add_action( 'init', 'idt_custom_options', 0 );
 
 /**
+ * Replace phone number special characters and make it ready to call
+ */
+require IDT_THEME_DIR . '/inc/phone-number-filter.php';
+
+/**
  * Loads related posts by selected terms or just random posts in the selected post type
  */
 require IDT_THEME_DIR . '/inc/related-posts.php';

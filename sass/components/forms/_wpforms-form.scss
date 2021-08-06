@@ -120,6 +120,15 @@ form.wpforms-form {
 		}
 	}
 
+	@include resolution(tablet-portrait) {
+		div.wpforms-submit-container {
+			button[type=submit] {
+				padding: 12px;
+				font-size: 18px;
+			}
+		}
+	}
+
 	@include resolution(mobile-portrait) {
 		div.wpforms-field-container {
 			div.wpforms-column {

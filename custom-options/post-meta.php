@@ -162,6 +162,23 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 				Field::make( 'text', 'form_shortcode', __( 'Форма шорткод', 'idt' ) )
 					->set_help_text( 'Шорткода на формата можете да намерите в Админ панел -> WPForms -> Shortcode' )
 			) )
+
+			/**
+			 * Image with tabs
+			 */
+			->add_fields( 'image-with-tabs', __( 'Снимка с табове', 'idt' ), array(
+				Field::make( 'checkbox', 'add_breadcrumbs', __( 'Добави линкове за страници' ) ),
+				Field::make( 'image', 'image', __( 'Снимка', 'idt' ) ),
+				Field::make( 'complex', 'tabs', __( 'Табове', 'idt' ) )
+					->set_layout( 'tabbed-vertical' )
+					->add_fields( array(
+						Field::make( 'text', 'title', __( 'Заглавие', 'idt' ) )
+							->set_required( true ),
+						Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) )
+							->set_required( true ),
+					) )
+					->set_header_template( '<%- title %>' ),
+			) )
 	) );
 
 

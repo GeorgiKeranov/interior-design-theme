@@ -1,0 +1,18 @@
+.section-form {
+	border: 2px solid $color__form-border;
+	padding: 30px;
+	max-width: 900px;
+	margin: 0 auto;
+
+	h2 {
+		margin-bottom: 10px;
+	}
+		
+	.section__text {
+		text-align: center;
+	}
+	
+	@include resolution(mobile-portrait) {
+		padding: 15px;
+	}
+}

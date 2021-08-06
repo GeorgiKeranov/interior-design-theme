@@ -179,6 +179,32 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 					) )
 					->set_header_template( '<%- title %>' ),
 			) )
+
+			/**
+			 * Columns with icon and text
+			 */
+			->add_fields( 'columns-with-icon-and-text', __( 'Колони с иконка и текст', 'idt' ), array(
+				Field::make( 'image', 'background_image', __( 'Снимка на фон', 'idt' ) ),
+				Field::make( 'text', 'title', __( 'Заглавие', 'idt' ) ),
+				Field::make( 'complex', 'columns', __( 'Колони', 'idt' ) )
+					->set_layout( 'tabbed-horizontal' )
+					->set_min( 3 )
+					->set_max( 3 )
+					->add_fields( array(
+						Field::make( 'image', 'icon', __( 'Иконка', 'idt' ) ),
+						Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) )
+					) ),
+				Field::make( 'text', 'btn_text', __( 'Текст на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'text', 'btn_link', __( 'Линк на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'select', 'btn_new_tab', __( 'Да се отваря ли линкът на бутона в нов таб', 'idt' ) )
+					->set_options( array(
+						'no' => __( 'Не', 'idt' ),
+						'yes' => __( 'Да', 'idt' ),
+					) )
+					->set_width( 33 ),
+			) )
 	) );
 
 

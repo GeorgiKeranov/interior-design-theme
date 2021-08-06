@@ -187,6 +187,11 @@ function idt_custom_options() {
 add_action( 'init', 'idt_custom_options', 0 );
 
 /**
+ * Add function to render button based on fields of button
+ */
+require IDT_THEME_DIR . '/inc/button.php';
+
+/**
  * Replace phone number special characters and make it ready to call
  */
 require IDT_THEME_DIR . '/inc/phone-number-filter.php';

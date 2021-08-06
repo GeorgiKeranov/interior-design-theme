@@ -130,6 +130,15 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 					->set_width( 50 )
 					->set_required( true ),
 			) )
+
+			/**
+			 * Text With Form
+			 */
+			->add_fields( 'text-with-form', __( 'Текст със форма', 'idt' ), array(
+				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
+				Field::make( 'text', 'form_shortcode', __( 'Форма шорткод', 'idt' ) )
+					->set_help_text( 'Шорткода на формата можете да намерите в Админ панел -> WPForms -> Shortcode' ),
+			) )
 	) );
 
 

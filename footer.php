@@ -52,11 +52,11 @@
 				<div class="footer__contacts">
 					<ul>
 						<li>
-							<a href="tel:359123456789"><?php echo idt_load_svg('icon-phone') ?> +359 123 456 789</a>
+							<a href="tel:359123456789"><?php echo idt_get_svg('icon-phone') ?> +359 123 456 789</a>
 						</li>
 
 						<li>
-							<a href="mailto:radoslava_design@gmail.com"><?php echo idt_load_svg('icon-mail') ?> radoslava_design@gmail.com</a>
+							<a href="mailto:radoslava_design@gmail.com"><?php echo idt_get_svg('icon-mail') ?> radoslava_design@gmail.com</a>
 						</li>
 					</ul>
 				</div><!-- /.footer__contacts -->
@@ -64,15 +64,15 @@
 				<div class="footer__socials">
 					<ul>
 						<li>
-							<a href="https://www.facebook.com"><?php echo idt_load_svg('icon-facebook') ?></a>
+							<a href="https://www.facebook.com"><?php echo idt_get_svg('icon-facebook') ?></a>
 						</li>
 
 						<li>
-							<a href="https://www.instagram.com"><?php echo idt_load_svg('icon-instagram') ?></a>
+							<a href="https://www.instagram.com"><?php echo idt_get_svg('icon-instagram') ?></a>
 						</li>
 
 						<li>
-							<a href="https://www.youtube.com"><?php echo idt_load_svg('icon-youtube') ?></a>
+							<a href="https://www.youtube.com"><?php echo idt_get_svg('icon-youtube') ?></a>
 						</li>
 					</ul><!-- /.socials -->
 				</div><!-- /.footer__socials -->

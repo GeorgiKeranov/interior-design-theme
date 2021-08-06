@@ -139,6 +139,29 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 				Field::make( 'text', 'form_shortcode', __( 'Форма шорткод', 'idt' ) )
 					->set_help_text( 'Шорткода на формата можете да намерите в Админ панел -> WPForms -> Shortcode' ),
 			) )
+
+			/**
+			 * Contact text with form
+			 */
+			->add_fields( 'contact-text-with-form', __( 'Контакти текст с форма', 'idt' ), array(
+				Field::make( 'checkbox', 'add_breadcrumbs', __( 'Добави линкове за страници' ) ),
+				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
+				Field::make( 'text', 'phone', __( 'Телефон', 'idt' ) ),
+				Field::make( 'text', 'email', __( 'Имейл', 'idt' ) ),
+				Field::make( 'text', 'work_time_title', __( 'Заглави за работно време', 'idt' ) ),
+				Field::make( 'complex', 'work_time_rows', __( 'Работно време редове', 'idt' ) )
+					->set_layout( 'tabbed-vertical' )
+					->add_fields( array(
+						Field::make( 'text', 'text_left', __( 'Текст в ляво', 'idt' ) )
+							->set_width( 50 ),
+						Field::make( 'text', 'text_right', __( 'Текст в дясно', 'idt' ) )
+							->set_width( 50 ),
+					) )
+					->set_header_template( '<%- text_left %>' ),
+				Field::make( 'rich_text', 'form_text', __( 'Текст над формата', 'idt' ) ),
+				Field::make( 'text', 'form_shortcode', __( 'Форма шорткод', 'idt' ) )
+					->set_help_text( 'Шорткода на формата можете да намерите в Админ панел -> WPForms -> Shortcode' )
+			) )
 	) );
 
 

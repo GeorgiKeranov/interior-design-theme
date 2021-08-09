@@ -20,67 +20,52 @@
 				</div><!-- /.footer__logo -->
 
 				<div class="footer__menu">
-					<nav class="nav-footer">
-						<ul>
-							<li>
-								<a href="#">Проекти</a>
-							</li>
-
-							<li>
-								<a href="#">Услуги</a>
-							</li>
-
-							<li>
-								<a href="#">Планиране</a>
-							</li>
-
-							<li>
-								<a href="#">За Нас</a>
-							</li>
-
-							<li>
-								<a href="#">Блог</a>
-							</li>
-
-							<li>
-								<a href="#">Контакти</a>
-							</li>
-						</ul>
-					</nav>
+					<?php if ( has_nav_menu( 'footer' ) ) {
+						wp_nav_menu( array(
+							'theme_location' => 'footer',
+							'container' => 'nav',
+							'container_class' => 'nav-footer'
+						) );
+					} ?>
 				</div><!-- /.footer__menu -->
+
+				<?php
+				$phone = carbon_get_theme_option( 'idt_phone' );
+				$email = carbon_get_theme_option( 'idt_email' );
+				$copyright = carbon_get_theme_option( 'idt_copyright' );
+				?>
 
 				<div class="footer__contacts">
 					<ul>
-						<li>
-							<a href="tel:359123456789"><?php echo idt_get_svg('icon-phone') ?> +359 12 345 6789</a>
-						</li>
+						<?php if ( !empty( $phone ) ) :
+							$phone = esc_html( $phone );
+							$ready_to_call_phone_number = idt_filter_phone_number( $phone ); ?>
 
-						<li>
-							<a href="mailto:radoslava_design@gmail.com"><?php echo idt_get_svg('icon-mail') ?> radoslava_design@gmail.com</a>
-						</li>
+							<li>
+								<a href="tel:<?php echo $ready_to_call_phone_number ?>"><?php echo idt_get_svg('icon-phone') ?> <?php echo $phone ?></a>
+							</li>
+						<?php endif; ?>
+
+						<?php if ( !empty( $email ) ) :
+							$email = antispambot( esc_html( $email ) ); ?>
+
+							<li>
+								<a href="mailto:<?php echo $email ?>"><?php echo idt_get_svg('icon-mail') ?> <?php echo $email ?></a>
+							</li>
+						<?php endif; ?>
 					</ul>
 				</div><!-- /.footer__contacts -->
 
 				<div class="footer__socials">
-					<ul>
-						<li>
-							<a href="https://www.facebook.com"><?php echo idt_get_svg('icon-facebook') ?></a>
-						</li>
-
-						<li>
-							<a href="https://www.instagram.com"><?php echo idt_get_svg('icon-instagram') ?></a>
-						</li>
-
-						<li>
-							<a href="https://www.youtube.com"><?php echo idt_get_svg('icon-youtube') ?></a>
-						</li>
-					</ul><!-- /.socials -->
+					<?php get_template_part( 'template-parts/socials' ) ?>
 				</div><!-- /.footer__socials -->
 			</div><!-- /.footer__main -->
 
-			<div class="footer__bottom">
-				<p class="copyright">© Radoslava Design. Всички права запазени.</p>
-			</div><!-- /.footer__bottom -->
+			<?php if ( !empty( $footer['copyright'] ) ) : ?>
+				<div class="footer__bottom">
+					<p class="copyright"><?php echo esc_html( $footer['copyright'] ) ?></p>
+				</div><!-- /.footer__bottom -->
+			<?php endif; ?>
 		</div><!-- /.container -->
 	</footer>
 </div><!-- #page -->

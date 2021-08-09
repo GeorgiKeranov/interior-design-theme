@@ -30,6 +30,7 @@ if ( ! function_exists( 'idt_setup' ) ) :
 		// Add custom field options to the theme
 		function idt_add_custom_options_to_theme() {
 			include_once(IDT_THEME_DIR . '/custom-options/post-meta.php');
+			include_once(IDT_THEME_DIR . '/custom-options/theme-options.php');
 		}
 		add_action( 'carbon_fields_register_fields', 'idt_add_custom_options_to_theme' );
 

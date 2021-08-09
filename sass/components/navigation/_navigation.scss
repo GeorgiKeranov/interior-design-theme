@@ -11,6 +11,10 @@
 			margin: 0 18px;
 			
 			@include anchor-hover-effect($color__text-navigation, .3s cubic-bezier(.175,.885,.32,1.275))
+
+			&.current-menu-item:after {
+				width: 100%;
+			}
 		}
 	}
 
@@ -112,5 +116,11 @@
 		font-weight: 700;
 
 		@include anchor-hover-effect();
+	}
+
+	.current-menu-item {
+		a:after {
+			width: 100%;
+		}
 	}
 }

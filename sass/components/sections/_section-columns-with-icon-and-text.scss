@@ -39,4 +39,19 @@
 			width: 100%;
 		}
 	}
+
+	@include resolution(mobile-portrait) {
+		.section__col {
+			flex-wrap: wrap;
+			text-align: center;
+		}
+
+		.section__icon {
+			flex: 0 0 100%;
+		}
+
+		.section__text {
+			width: 100%;
+		}
+	}
 }

@@ -83,4 +83,19 @@
 		}
 
 	}
+
+	@include resolution(mobile-portrait) {
+		.section__columns { 
+			flex-wrap: wrap;
+		}
+
+		.section__tabs-titles {
+			width: 100%;
+		}
+
+		.section__tabs-content {
+			width: 100%;
+			padding-left: 0;
+		}
+	}
 }

@@ -29,84 +29,46 @@
 		<div class="container">
 			<div class="header__inner">
 				<div class="header__left">
-					<nav class="nav nav--left">
-						<ul>
-							<li>
-								<a href="#">Проекти</a>
-							</li>
-
-							<li>
-								<a href="#">Услуги</a>
-							</li>
-
-							<li>
-								<a href="#">Планиране</a>
-							</li>
-						</ul>
-					</nav><!-- /.nav -->
+					<?php if ( has_nav_menu( 'desktop-header-left' ) ) {
+						wp_nav_menu( array(
+							'theme_location' => 'desktop-header-left',
+							'container' => 'nav',
+							'container_class' => 'nav nav--left'
+						) );
+					} ?>
 				</div><!-- /.header__left -->
 
 				<div class="header__center">
 					<a href="<?php echo home_url('/') ?>" class="logo"></a>
-
-					<!-- <a href="?php echo home_url('/') ?>" class="dot"></a> -->
 				</div><!-- /.header__center -->
 
 				<div class="header__right">
-					<nav class="nav nav--right">
-						<ul>
-							<li>
-								<a href="#">За Нас</a>
-							</li>
-
-							<li>
-								<a href="#">Блог</a>
-							</li>
-
-							<li>
-								<a href="#">Контакти</a>
-							</li>
-						</ul>
-					</nav><!-- /.nav -->
+					<?php if ( has_nav_menu( 'desktop-header-right' ) ) {
+						wp_nav_menu( array(
+							'theme_location' => 'desktop-header-right',
+							'container' => 'nav',
+							'container_class' => 'nav nav--right'
+						) );
+					} ?>
 				</div><!-- /.header__right -->
 
-				<div class="header__menu-mobile">
-					<div class="header__menu-toggle">
-						<div></div>
+				<?php if ( has_nav_menu( 'tablet-mobile-header' ) ) : ?>
+					<div class="header__menu-mobile">
+						<div class="header__menu-toggle">
+							<div></div>
 
-						<div></div>
+							<div></div>
 
-						<div></div>
-					</div><!-- /.header__menu-toggle -->
-
-					<nav class="nav-mobile">
-						<ul>
-							<li>
-								<a href="#">Проекти</a>
-							</li>
-
-							<li>
-								<a href="#">Услуги</a>
-							</li>
-
-							<li>
-								<a href="#">Планиране</a>
-							</li>
-
-							<li>
-								<a href="#">За Нас</a>
-							</li>
-
-							<li>
-								<a href="#">Блог</a>
-							</li>
-
-							<li>
-								<a href="#">Контакти</a>
-							</li>
-						</ul>
-					</nav><!-- /.nav-mobile -->
-				</div><!-- /.header__menu-mobile -->
+							<div></div>
+						</div><!-- /.header__menu-toggle -->
+						
+						<?php wp_nav_menu( array(
+							'theme_location' => 'tablet-mobile-header',
+							'container' => 'nav',
+							'container_class' => 'nav-mobile'
+						) ); ?>
+					</div><!-- /.header__menu-mobile -->
+				<?php endif; ?>
 			</div><!-- /.header__inner -->
 		</div><!-- /.container -->
 	</header><!-- /.header -->

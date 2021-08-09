@@ -62,7 +62,10 @@ if ( ! function_exists( 'idt_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'idt' ),
+				'desktop-header-left' => esc_html__( 'Заглавно меню от ляво (голям екран)', 'idt' ),
+				'desktop-header-right' => esc_html__( 'Заглавно меню от дясно (голям екран)', 'idt' ),
+				'tablet-mobile-header' => esc_html__( 'Заглавно меню (таблет и телефон)', 'idt' ),
+				'footer' => esc_html__( 'Меню в долната част на сайта', 'idt' ),
 			)
 		);
 

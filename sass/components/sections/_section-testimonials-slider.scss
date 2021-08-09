@@ -9,4 +9,10 @@
 		text-align: center;
 		margin-bottom: 40px;
 	}
+
+	@include resolution(tablet-portrait) {
+		.section__text {
+			margin-bottom: 30px;
+		}
+	}
 }

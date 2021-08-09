@@ -27,4 +27,16 @@
 		margin-top: 20px;
 		text-align: center;
 	}
+
+	@include resolution(tablet-portrait) {
+		padding: 30px 0;
+
+		.section-cols {
+			flex-wrap: wrap;
+		}
+
+		.section__col {
+			width: 100%;
+		}
+	}
 }

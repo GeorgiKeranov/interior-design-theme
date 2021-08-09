@@ -93,4 +93,12 @@
 	.swiper-pagination {
 		bottom: 0;
 	}
+
+	@include resolution(tablet-portrait) {
+		padding: 0 0 40px;
+
+		.swiper-slide__inner {
+			padding: 20px 50px;
+		}
+	}
 }

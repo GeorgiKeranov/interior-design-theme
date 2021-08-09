@@ -58,11 +58,29 @@
 		visibility: hidden;
 		left: -10000px;
 		transition: .3s opacity, .3s visibility;
+		margin-bottom: 20px;
 	}
 
 	.section__tab-content--active {
 		position: static;
 		opacity: 1;
 		visibility: visible;
+	}
+
+	@include resolution(desktop) {
+		.section__tabs {
+			padding: 0 15px;
+		}
+	}
+
+	@include resolution(desktop-small) {
+		.section__image {
+			display: none;
+		}
+
+		.section__tabs {
+			width: 100%;
+		}
+
 	}
 }

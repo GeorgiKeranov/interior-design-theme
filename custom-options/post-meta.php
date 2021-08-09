@@ -205,6 +205,52 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 					) )
 					->set_width( 33 ),
 			) )
+
+			/**
+			 * Testimonials Slider
+			 */
+			->add_fields( 'testimonials-slider', __( 'Слайдер с препоръки', 'idt' ), array(
+				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
+				Field::make( 'complex', 'slides', __( 'Слайдове', 'idt' ) )
+					->set_layout( 'tabbed-horizontal' )
+					->add_fields( array(
+						Field::make( 'image', 'image', __( 'Снимка на автор', 'idt' ) ),
+						Field::make( 'rich_text', 'testimonial', __( 'Препоръка', 'idt' ) ),
+						Field::make( 'checkbox', 'add_btn', __( 'Добави бутон', 'idt' ) ),
+						Field::make( 'text', 'btn_text', __( 'Текст на бутон', 'idt' ) )
+							->set_width( 33 )
+							->set_conditional_logic( array(
+								array(
+									'field' => 'add_btn',
+									'value' => true,
+									'compare' => '='
+								)
+							) ),
+						Field::make( 'text', 'btn_link', __( 'Линк на бутон', 'idt' ) )
+							->set_width( 33 )
+							->set_conditional_logic( array(
+								array(
+									'field' => 'add_btn',
+									'value' => true,
+									'compare' => '='
+								)
+							) ),
+						Field::make( 'select', 'btn_new_tab', __( 'Да се отваря ли линкът на бутона в нов таб', 'idt' ) )
+							->set_options( array(
+								'no' => __( 'Не', 'idt' ),
+								'yes' => __( 'Да', 'idt' ),
+							) )
+							->set_width( 33 )
+							->set_conditional_logic( array(
+								array(
+									'field' => 'add_btn',
+									'value' => true,
+									'compare' => '='
+								)
+							) ),
+						Field::make( 'text', 'name', __( 'Име на автор', 'idt' ) ),
+					) ),
+			) )
 	) );
 
 

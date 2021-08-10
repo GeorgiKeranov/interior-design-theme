@@ -159,8 +159,6 @@ add_action( 'widgets_init', 'idt_widgets_init' );
  * Enqueue scripts and styles.
  */
 function idt_scripts() {
-	wp_enqueue_style( 'google-ubuntu-font', 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap', array(), _S_VERSION );
-
 	wp_enqueue_style( 'idt-photoswipe-css', get_template_directory_uri() . '/external/photoswipe/photoswipe.css', array(), _S_VERSION );
 	wp_enqueue_style( 'idt-photoswipe-default-skin-css', get_template_directory_uri() . '/external/photoswipe/default-skin/default-skin.css', array(), _S_VERSION );
 	wp_enqueue_style( 'idt-swiper-css', get_template_directory_uri() . '/external/swiper/swiper-bundle.min.css', array(), _S_VERSION );

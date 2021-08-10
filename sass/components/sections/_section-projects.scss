@@ -12,6 +12,7 @@
 		position: relative;
 		width: 25%;
 		padding: 2px;
+		overflow: hidden;
 		
 		& > a {
 			display: inline-block;
@@ -44,9 +45,32 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
-			background: rgba(48,48,48,0.67);
+			background: rgba(48, 48, 48, 0.67);
 			opacity: 0;
 			transition: opacity .35s linear;
+		}
+	}
+
+	.section__title {
+		position: absolute;
+		padding: 0 15px;
+		left: 0;
+		right: 0;
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-100%);
+		transition: opacity .35s, top .5s, visibility .5s;
+
+		h2 {
+			text-transform: uppercase;
+			font-size: 24px;
+			line-height: 1.5;
+			text-align: center;
+
+			a {
+				color: #fff;
+			}
 		}
 	}
 
@@ -56,7 +80,7 @@
 		left: 50%;
 		transform: translate(-50%, 0);
 		opacity: 0;
-		transition: opacity 0.35s, bottom 0.35s, transform 0.4s;
+		transition: opacity .35s, bottom .35s, transform .4s;
 
 		a {
 			display: flex;
@@ -73,7 +97,7 @@
 
 			svg {
 				margin-left: 4px;
-			    width: 5px;
+				width: 5px;
 			}
 		}
 	}
@@ -87,6 +111,12 @@
 			&:after {
 				opacity: 1;
 			}
+		}
+
+		.section__title {
+			top: 50%;
+			visibility: visible;
+			opacity: 1;
 		}
 
 		.section__view-project {
@@ -110,10 +140,57 @@
 	@include resolution(tablet-portrait) {
 		.section__project {
 			width: 50%;
-		}	
+		}
+
+		.section__title {
+			opacity: 1;
+			visibility: visible;
+			top: auto;
+			bottom: 1px;
+			padding: 10px 0 35px;
+			background-color: rgba(48, 48, 48, 0.4);
+			transform: none;
+			transition: background-color .35s;
+
+			h2 {
+				font-size: 20px;
+				margin: 0;
+				line-height: 1.1;
+			}
+		}
+
+		.section__view-project {
+			opacity: 1;
+		    top: auto;
+			bottom: 10px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			transform: none;
+
+			a {
+				display: inline-block;
+				padding: 0;
+			}
+		}
+
+		.section__project:hover {
+			.section__title {
+				top: auto;
+				background-color: transparent;
+			}
+
+			.section__view-project {
+				transform: none;
+
+				a:after {
+					width: 100%;
+				}
+			}
+		}
 	}
 
-	@include resolution(mobile) {
+	@include resolution(mobile-portrait) {
 		.section__cta {
 			margin: 30px 0;
 		}

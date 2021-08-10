@@ -10,6 +10,16 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 	->add_fields( array(
 		Field::make( 'complex', 'idt_page_builder_sections', '' )
 			/**
+			 * Heading
+			 */
+			->add_fields( 'heading', __( 'Заглавие', 'idt' ), array(
+				Field::make( 'checkbox', 'add_breadcrumbs', __( 'Добави линкове за страници' ) ),
+				Field::make( 'text', 'title', __( 'Заглавие', 'idt' ) ),
+				Field::make( 'textarea', 'description', __( 'Описание', 'idt' ) ),
+			) )
+
+
+			/**
 			 * Selected Projects
 			 */
 			->add_fields( 'selected-projects', __( 'Селектирани Проекти', 'idt' ), array(
@@ -20,6 +30,13 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 							'post_type' => 'idt_project'
 						)
 					) )
+			) )
+
+			/**
+			 * Projects
+			 */
+			->add_fields( 'projects', __( 'Всички Проекти', 'idt' ), array(
+				Field::make( 'separator', 'projects_separator', __( 'Всички категории на проекти и проекти ще бъдат генерирани автоматично', 'idt' ) )
 			) )
 
 			/**

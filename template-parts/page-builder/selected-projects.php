@@ -4,6 +4,7 @@
 	<div class="section__content">
 		<?php foreach ( $projects as $project ) :
 			$project_id = $project['id'];
+			$project_title = get_the_title( $project_id );
 			$project_permalink = get_the_permalink( $project_id );
 			$project_thumbnail_id = get_post_thumbnail_id( $project_id );
 			?>
@@ -15,6 +16,10 @@
 				<?php endif; ?>
 
 				<a href="<?php echo $project_permalink ?>"></a>
+
+				<div class="section__title">
+					<h2><a href="<?php echo $project_permalink ?>"><?php echo esc_html( $project_title ) ?></a></h2>
+				</div><!-- /.section__title -->
 
 				<div class="section__view-project">
 					<a href="<?php echo $project_permalink ?>"><?php _e( 'Виж проект', 'idt' ) ?> <?php echo idt_get_svg('icon-arrow-right') ?></a>

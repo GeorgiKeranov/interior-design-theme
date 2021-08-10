@@ -124,11 +124,14 @@
 		}
 	}
 
+	.section__content-loading {
+		display: none;
+	}
+
 	.section__cta {
 		margin: 50px 0;
 		text-align: center;
 	}
-
 
 	@include resolution(desktop-small) {
 		.section__project {
@@ -197,5 +200,17 @@
 		.section__project {
 			width: 100%;
 		}	
+	}
+}
+
+.section-projects--loading {
+	.section__content-loading {
+		display: block;
+	}
+
+	.categories {
+		a {
+			pointer-events: none;
+		}
 	}
 }

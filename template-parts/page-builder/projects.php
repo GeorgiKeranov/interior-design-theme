@@ -4,7 +4,7 @@ $categories = get_terms( array(
     'hide_empty' => false,
 ) );
 
-$projects = get_posts( array(
+$projects_query = new WP_Query( array(
 	'post_type' => 'idt_project',
 	'post_status' => 'publish',
 	'posts_per_page' => '12',
@@ -12,7 +12,7 @@ $projects = get_posts( array(
 ) );
 ?>
 
-<div class="section-projects">
+<div class="section-projects" data-max-pages="<?php echo $projects_query->max_num_pages ?>">
 	<?php if ( !empty( $categories ) ) : ?>
 		<div class="section__categories">
 			<ul class="categories">
@@ -30,7 +30,7 @@ $projects = get_posts( array(
 	<?php endif; ?>
 
 	<div class="section__content">
-		<?php get_template_part( 'template-parts/projects-from-listing', null, $projects ) ?>		
+		<?php get_template_part( 'template-parts/projects-from-listing', null, $projects_query->posts ) ?>		
 	</div><!-- /.section__content -->
 
 	<div class="section__content-loading">

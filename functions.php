@@ -174,6 +174,11 @@ function idt_scripts() {
 	wp_enqueue_script( 'idt-gallery', get_template_directory_uri() . '/js/gallery.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idt-swiper', get_template_directory_uri() . '/js/swiper.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idt-tabs', get_template_directory_uri() . '/js/tabs.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'idt-projects-ajax', get_template_directory_uri() . '/js/projects-ajax.js', array('jquery'), _S_VERSION, true );
+
+	wp_localize_script( 'idt-projects-ajax', 'idt_projects', array(
+		'ajax_url' => admin_url( 'admin-ajax.php' ),
+	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -190,6 +195,12 @@ function idt_custom_options() {
 	include_once( IDT_THEME_DIR . '/custom-options/shortcodes.php' );
 }
 add_action( 'init', 'idt_custom_options', 0 );
+
+/**
+ * Add loading of new pages on scroll and category change
+ * without reloading the page on sections with listing of posts
+ */
+require IDT_THEME_DIR . '/inc/posts-listing-ajax.php';
 
 /**
  * Add function to render button based on fields of button
@@ -222,26 +233,6 @@ require IDT_THEME_DIR . '/inc/load-svg-icon.php';
 require IDT_THEME_DIR . '/inc/transliterate-permalinks.php';
 
 /**
- * Implement the Custom Header feature.
- */
-require IDT_THEME_DIR . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require IDT_THEME_DIR . '/inc/template-tags.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require IDT_THEME_DIR . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-require IDT_THEME_DIR . '/inc/customizer.php';
-
-/**
  * Disable guttenberg editor for certain templates
  */
 require IDT_THEME_DIR . '/inc/disable-gutenberg.php';
@@ -250,11 +241,3 @@ require IDT_THEME_DIR . '/inc/disable-gutenberg.php';
  * Disable classic editor for certain templates
  */
 require IDT_THEME_DIR . '/inc/disable-classic-editor.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require IDT_THEME_DIR . '/inc/jetpack.php';
-}
-

@@ -61,9 +61,9 @@
 				</div><!-- /.footer__socials -->
 			</div><!-- /.footer__main -->
 
-			<?php if ( !empty( $footer['copyright'] ) ) : ?>
+			<?php if ( !empty( $copyright ) ) : ?>
 				<div class="footer__bottom">
-					<p class="copyright"><?php echo esc_html( $footer['copyright'] ) ?></p>
+					<p class="copyright"><?php echo esc_html( $copyright ) ?></p>
 				</div><!-- /.footer__bottom -->
 			<?php endif; ?>
 		</div><!-- /.container -->

@@ -1,9 +1,4 @@
 <?php
-$categories = get_terms( array(
-    'taxonomy' => 'idt_project_category',
-    'hide_empty' => false,
-) );
-
 $projects_query = new WP_Query( array(
 	'post_type' => 'idt_project',
 	'post_status' => 'publish',
@@ -13,24 +8,14 @@ $projects_query = new WP_Query( array(
 ?>
 
 <div class="section-projects section-projects--js-ajax" data-max-pages="<?php echo $projects_query->max_num_pages ?>">
-	<?php if ( !empty( $categories ) ) : ?>
-		<div class="section__categories">
-			<ul class="categories">
-				<li>
-					<a href="all" class="active"><?php _e( 'Всички Проекти' ) ?></a>
-				</li>
-
-				<?php foreach ( $categories as $category ) : ?>
-					<li>
-						<a href="<?php echo $category->term_id ?>"><?php echo esc_html( $category->name ) ?></a>
-					</li>
-				<?php endforeach; ?>
-			</ul><!-- /.categories -->
-		</div><!-- /.section__categories -->
-	<?php endif; ?>
+	<div class="section__categories">
+		<?php get_template_part('template-parts/taxonomy-categories', null, array(
+			'taxonomy' => 'idt_project_category'
+		) ); ?>
+	</div><!-- /.section__categories -->
 
 	<div class="section__content">
-		<?php get_template_part( 'template-parts/projects-from-listing', null, $projects_query->posts ) ?>		
+		<?php get_template_part( 'template-parts/projects-from-listing', null, $projects_query->posts ) ?>
 	</div><!-- /.section__content -->
 
 	<div class="section__content-loading">

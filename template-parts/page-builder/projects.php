@@ -12,7 +12,7 @@ $projects_query = new WP_Query( array(
 ) );
 ?>
 
-<div class="section-projects" data-max-pages="<?php echo $projects_query->max_num_pages ?>">
+<div class="section-projects section-projects--js-ajax" data-max-pages="<?php echo $projects_query->max_num_pages ?>">
 	<?php if ( !empty( $categories ) ) : ?>
 		<div class="section__categories">
 			<ul class="categories">

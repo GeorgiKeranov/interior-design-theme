@@ -2,8 +2,12 @@
 	let $window = $(window);
 	let $document = $(document);
 
-	let $sectionProjects = $('.section-projects');
+	let $sectionProjects = $('.section-projects--js-ajax');
 	let $projectsContainer = $sectionProjects.find('.section__content');
+
+	if ( !$sectionProjects.length ) {
+		return;
+	}
 
 	let page = 1;
 	let maxPages = $sectionProjects.data('max-pages');

@@ -237,3 +237,8 @@ require IDT_THEME_DIR . '/inc/disable-gutenberg.php';
  * Disable classic editor for certain templates
  */
 require IDT_THEME_DIR . '/inc/disable-classic-editor.php';
+
+/**
+ * Add helper functions for all pages
+ */
+require IDT_THEME_DIR . '/inc/page-functions.php';

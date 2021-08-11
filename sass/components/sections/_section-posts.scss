@@ -1,0 +1,154 @@
+.section-posts {
+	padding: 0 10px 20px;
+	overflow: hidden;
+
+	.section__posts {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+	}
+
+	.section__post {
+		position: relative;
+		width: 25%;
+		padding: 0 5px;
+		margin-bottom: 30px;
+	}
+
+	.section__image {
+		position: relative;
+		padding-top: 67%;
+		margin-bottom: 10px;
+
+		a {
+			display: inline-block;
+		}
+
+		a:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(48, 48, 48, 0.67);
+			opacity: 0;
+			transition: opacity .35s;
+		}
+
+		a:hover:after {
+			opacity: 1;
+		}
+	}
+
+	.section__image-background {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.section__title {
+		padding: 0 10px;
+
+		h2 {
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 1.5;
+			margin-bottom: 2px;
+
+			a {
+				color: $color__text-main;
+			}
+		}
+	}
+
+	.section__view-post {
+		padding: 0 10px;
+
+		a {
+			display: inline-block;
+			color: $color__text-main;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 700;
+			text-decoration: none;
+			padding: 5px 0;
+
+			@include anchor-hover-effect($color__text-main);
+
+			svg {
+				position: relative;
+				top: 2px;
+				margin-left: 4px;
+				width: 5px;
+				fill: $color__text-main;
+			}
+		}
+	}
+
+	.section__post:hover {
+		
+	}
+
+	.section__content-loading {
+		display: none;
+	}
+
+	@include resolution(desktop-small) {
+		.section__post {
+			width: 33.33%;
+		}
+	}
+
+	@include resolution(tablet-portrait) {
+		.section__post {
+			width: 50%;
+		}
+
+		.section__title {
+			h2 {
+				font-size: 20px;
+				line-height: 1.1;
+			}
+		}
+	}
+
+	@include resolution(mobile) {
+		.section__title {
+			padding: 0;
+
+			h2 {
+				font-size: 17px;
+			}
+		}
+
+		.section__view-post {
+			padding: 0;
+		}
+	}
+
+	@include resolution(mobile-portrait) {
+		.section__post {
+			width: 100%;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+	}
+}
+
+.section-posts--loading {
+	.section__content-loading {
+		display: block;
+	}
+
+	.categories {
+		a {
+			pointer-events: none;
+		}
+	}
+}

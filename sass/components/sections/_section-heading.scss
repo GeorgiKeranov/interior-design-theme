@@ -7,4 +7,12 @@
 	p {
 		font-size: 18px;
 	}
+
+	@include resolution(mobile) {
+		text-align: center;
+
+		p {
+			font-size: 17px;
+		}
+	}
 }

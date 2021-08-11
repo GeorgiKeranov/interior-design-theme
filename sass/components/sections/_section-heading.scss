@@ -1,4 +1,6 @@
 .section-heading {
+	margin-bottom: 30px;
+	
 	h1 {
 		margin-bottom: 7px;
 		text-transform: uppercase;
@@ -6,6 +8,10 @@
 
 	p {
 		font-size: 18px;
+	}
+
+	*:last-child {
+		margin-bottom: 0;
 	}
 
 	@include resolution(mobile) {

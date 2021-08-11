@@ -1,18 +1,26 @@
 <?php
-$related_projects = idt_get_related_posts( get_the_ID(), 'idt_project_category' );
+$taxonomy = '';
 
-if ( empty( $related_projects ) ) {
+if ( !empty( $args['taxonomy'] ) ) {
+	$taxonomy = $args['taxonomy'];
+}
+
+$related_posts = idt_get_related_posts( get_the_ID(), $taxonomy );
+
+if ( empty( $related_posts ) ) {
 	return;
 }
 ?>
 
-<div class="section-related-projects">
+<div class="section-related-posts">
 	<div class="container">
-		<h2><?php _e( 'Други проекти', 'idt' ) ?></h2>
+		<?php if ( !empty( $args['title'] ) ) : ?>
+			<h2><?php echo esc_html( $args['title'] ) ?></h2>
+		<?php endif; ?>
 
-		<div class="section__projects">
+		<div class="section__posts">
 			<div class="section-cols section-cols--three">
-				<?php foreach ( $related_projects as $project_id ) :
+				<?php foreach ( $related_posts as $project_id ) :
 					$thumbnail_id = get_post_thumbnail_id( $project_id );
 					$title = get_the_title( $project_id );
 					$permalink = get_the_permalink( $project_id );
@@ -33,6 +41,6 @@ if ( empty( $related_projects ) ) {
 					</div><!-- /.section__col -->
 				<?php endforeach; ?>
 			</div><!-- /.section-cols section-cols--three -->
-		</div><!-- /.section__projects -->
+		</div><!-- /.section__posts -->
 	</div><!-- /.container -->
-</div><!-- /.section-related-projects -->
+</div><!-- /.section-related-posts -->

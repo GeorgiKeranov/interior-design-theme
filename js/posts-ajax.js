@@ -2,22 +2,34 @@
 	let $window = $(window);
 	let $document = $(document);
 
-	let $sectionProjects = $('.section-projects--js-ajax');
-	let $projectsContainer = $sectionProjects.find('.section__content');
+	let $sectionPosts;
+	let currentPostType = '';
 
-	if ( !$sectionProjects.length ) {
+	let postTypes = ['posts', 'projects'];
+	for (let index in postTypes) {
+		$sectionPosts = $('.section-' + postTypes[index] + '--js-ajax');
+
+		if ($sectionPosts.length) {
+			currentPostType = postTypes[index];
+			break;
+		}
+	}
+	
+	if (!$sectionPosts.length) {
 		return;
 	}
 
+	$containerPosts = $sectionPosts.find('.section__content');
+
 	let page = 1;
-	let maxPages = $sectionProjects.data('max-pages');
+	let maxPages = $sectionPosts.data('max-pages');
 	let isLoading = false;
 
-	loadProjectsWithAjaxOnCategoryChange();
+	loadPostsWithAjaxOnCategoryChange();
 
-	loadMoreProjectsWithAjaxOnScroll()
+	loadMorePostsWithAjaxOnScroll()
 
-	function loadProjectsWithAjaxOnCategoryChange() {
+	function loadPostsWithAjaxOnCategoryChange() {
 		let $categoriesContainer = $('.categories');
 		let $categories = $categoriesContainer.find( 'a' );
 
@@ -50,14 +62,14 @@
 			// Add active state to the recently clicked category
 			$this.addClass('active');
 
-			// Remove projects from the previous clicked category
-			$projectsContainer.empty();
+			// Remove posts from the previous clicked category
+			$containerPosts.empty();
 
 			// Show loading icon while getting the data from back end
-			$sectionProjects.addClass('section-projects--loading');
+			$sectionPosts.addClass('section-' + currentPostType + '--loading');
 
 			let ajaxData = {
-				action: 'get_projects_ajax',
+				action: 'get_' + currentPostType + '_ajax',
 			};
 
 			let categoryId = $this.attr('href');
@@ -68,7 +80,7 @@
 
 			$.ajax({
 				type: "GET",
-				url: idt_projects.ajax_url,
+				url: idt_posts.ajax_url,
 				data: ajaxData,
 				success: function(result) {
 					if (result['success']) {
@@ -76,45 +88,47 @@
 
 						maxPages = result['data']['max_num_pages'];
 
-						$projectsContainer.append(responseHtml);
+						$containerPosts.append(responseHtml);
 					}
 				},
 				error: function(error) {
 					console.log(error);
 				},
 				complete: function() {
-					$sectionProjects.removeClass('section-projects--loading');
+					$sectionPosts.removeClass('section-' + currentPostType + '--loading');
 
 					isLoading = false;
+
+					loadMorePostsWithAjax();
 				}
 			});
 		});
 	}
 
-	function loadMoreProjectsWithAjaxOnScroll() {
-		$window.on('load scroll', loadMoreProjectsWithAjax);
+	function loadMorePostsWithAjaxOnScroll() {
+		$window.on('load scroll', loadMorePostsWithAjax);
 	}
 
-	function loadMoreProjectsWithAjax() {
+	function loadMorePostsWithAjax() {
 		if ( isLoading ) {
 			return;
 		}
 
 		let scrollBottom = $document.scrollTop() + $window.innerHeight();
-		let bottomPositionOfProjects = $sectionProjects.offset().top + $sectionProjects.outerHeight(true);
+		let bottomPositionOfPosts = $sectionPosts.offset().top + $sectionPosts.outerHeight(true);
 
-		let differenceInPosition = bottomPositionOfProjects - scrollBottom;
+		let differenceInPosition = bottomPositionOfPosts - scrollBottom;
 
-		// If the difference between bottom position of the projects section and the
+		// If the difference between bottom position of the posts section and the
 		// top position of the scrolled document is smaller than 500px load more posts
 		if ( differenceInPosition < 500 ) {
 			isLoading = true;
 
 			let ajaxData = {
-				action: 'get_projects_ajax',
+				action: 'get_' + currentPostType + '_ajax',
 			};
 
-			let $selectedCategory = $sectionProjects.find('.categories .active');
+			let $selectedCategory = $sectionPosts.find('.categories .active');
 			if ($selectedCategory.length ) {
 				let categoryId = $selectedCategory.attr('href');
 
@@ -131,19 +145,19 @@
 			}
 
 			// Show loading icon while getting the data from back end
-			$sectionProjects.addClass('section-projects--loading');
+			$sectionPosts.addClass('section-' + currentPostType + '--loading');
 
 			ajaxData.page = page;
 
 			$.ajax({
 				type: "GET",
-				url: idt_projects.ajax_url,
+				url: idt_posts.ajax_url,
 				data: ajaxData,
 				success: function(result) {
 					if (result['success']) {
 						let responseHtml = $(result['data']['html']);
 
-						$projectsContainer.append(responseHtml);
+						$containerPosts.append(responseHtml);
 					}
 				},
 				error: function(error) {
@@ -152,10 +166,10 @@
 				complete: function() {
 					isLoading = false;
 
-					$sectionProjects.removeClass('section-projects--loading');
+					$sectionPosts.removeClass('section-' + currentPostType + '--loading');
 
 					if ( differenceInPosition < 500 ) {
-						loadMoreProjectsWithAjax();
+						loadMorePostsWithAjax();
 					}
 				}
 			});

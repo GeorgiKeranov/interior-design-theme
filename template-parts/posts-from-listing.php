@@ -1,9 +1,9 @@
 <?php
-if ( empty( $posts ) ) {
+if ( empty( $args ) ) {
 	return;
 }
 
-foreach ( $posts as $post ) :
+foreach ( $args as $post ) :
 	$post_id = $post->ID;
 	$post_title = $post->post_title;
 	$post_thumbnail_url = get_the_post_thumbnail_url( $post_id, 'medium_large_fixed' );

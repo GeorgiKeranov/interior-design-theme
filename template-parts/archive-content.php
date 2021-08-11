@@ -19,19 +19,21 @@
 	</div><!-- /.container -->
 </div><!-- /.section-heading -->
 
-<div class="section-posts">
+<?php global $wp_query; ?>
+<div class="section-posts section-posts--js-ajax" data-max-pages="<?php echo $wp_query->max_num_pages ?>">
 	<div class="section__categories">
 		<?php get_template_part('template-parts/taxonomy-categories', null, array(
 			'taxonomy' => 'category'
 		) ); ?>
 	</div><!-- /.section__categories -->
 
-	<div class="section__posts">
-		<?php
-		global $wp_query;
-
-		if ( !empty( $wp_query ) && property_exists( $wp_query, 'posts' ) ) {
+	<div class="section__content">
+		<?php if ( !empty( $wp_query ) && property_exists( $wp_query, 'posts' ) ) {
 			get_template_part( 'template-parts/posts-from-listing', null, $wp_query->posts );
 		} ?>
-	</div><!-- /.section__posts -->
+	</div><!-- /.section__content -->
+
+	<div class="section__content-loading">
+		<?php echo idt_get_svg('icon-loading') ?>
+	</div><!-- /.section__content-loading -->
 </div><!-- /.section-posts -->

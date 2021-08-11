@@ -2,7 +2,7 @@
 	padding: 0 10px 20px;
 	overflow: hidden;
 
-	.section__posts {
+	.section__content {
 		display: flex;
 		flex-wrap: wrap;
 		position: relative;
@@ -89,10 +89,6 @@
 				fill: $color__text-main;
 			}
 		}
-	}
-
-	.section__post:hover {
-		
 	}
 
 	.section__content-loading {

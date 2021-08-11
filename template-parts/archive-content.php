@@ -21,11 +21,15 @@
 
 <?php global $wp_query; ?>
 <div class="section-posts section-posts--js-ajax" data-max-pages="<?php echo $wp_query->max_num_pages ?>">
-	<div class="section__categories">
-		<?php get_template_part('template-parts/taxonomy-categories', null, array(
-			'taxonomy' => 'category'
-		) ); ?>
-	</div><!-- /.section__categories -->
+	<?php
+	// Show categories only on blog page
+	if ( is_home() ) : ?>
+		<div class="section__categories">
+			<?php get_template_part('template-parts/taxonomy-categories', null, array(
+				'taxonomy' => 'category'
+			) ); ?>
+		</div><!-- /.section__categories -->
+	<?php endif; ?>
 
 	<div class="section__content">
 		<?php if ( !empty( $wp_query ) && property_exists( $wp_query, 'posts' ) ) {

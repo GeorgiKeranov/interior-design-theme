@@ -21,13 +21,9 @@
 		font-size: 18px;
 	}
 
-	@include resolution(tablet-portrait) {
+	@include resolution(mobile) {
 		font-size: 17px;
 		padding: 10px 15px;
-	}
-
-	@include resolution(mobile) {
-		font-size: 16px;
 	}
 }
 
@@ -49,7 +45,7 @@
 		background-color: $color__text-main;
 	}
 
-	@include resolution(tablet-portrait) {
+	@include resolution(mobile) {
 		font-size: 17px;
 		padding: 10px 15px;
 	}

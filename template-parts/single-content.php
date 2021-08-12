@@ -12,7 +12,11 @@
 	</div><!-- /.container -->
 </div><!-- /.section-page -->
 
-<?php get_template_part('template-parts/section-related-posts', null, array(
-	'title' => __( 'Други постове', 'idt' ),
-	'taxonomy' => 'category',
-) ); ?>
+<?php
+// Render releated posts if this page is single of the 'post' post type
+if ( is_singular( 'post' ) ) {
+	get_template_part('template-parts/section-related-posts', null, array(
+		'title' => __( 'Други постове', 'idt' ),
+		'taxonomy' => 'category',
+	) );
+}

@@ -1,16 +1,17 @@
 .section-404 {
 	margin: 40px auto;
-	padding: 20px;
 	text-align: center;
 	max-width: 800px;
 
 	h1 {
 		font-size: 160px;
-		margin: 0;
+		line-height: 0.69;
+		margin-bottom: 40px;
 	}
 
 	h2 {
 		text-transform: uppercase;
+		font-size: 33px;
 	}
 
 	p {
@@ -25,6 +26,31 @@
 			color: $color__text-main;
 			border-color: $color__text-main;
 			background-color: white;
+		}
+	}
+
+	@include resolution(tablet-portrait) {
+		h1 {
+			font-size: 130px;
+		}
+
+		h2 {
+			font-size: 28px;
+		}
+	}
+
+	@include resolution(mobile) {
+		h1 {
+			font-size: 100px;
+			margin-bottom: 35px;
+		}
+
+		h2 {
+			font-size: 25px;
+		}
+
+		p {
+			font-size: 18px;
 		}
 	}
 }

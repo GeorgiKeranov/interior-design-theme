@@ -242,3 +242,9 @@ require IDT_THEME_DIR . '/inc/disable-classic-editor.php';
  * Add helper functions for all pages
  */
 require IDT_THEME_DIR . '/inc/page-functions.php';
+
+/**
+ * Add customizations on admin pages
+ */
+require IDT_THEME_DIR . '/inc/admin-pages-customization.php';
+

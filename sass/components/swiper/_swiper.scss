@@ -46,11 +46,13 @@
 	}
 
 	.swiper-button-prev:after {
-		margin-right: 3px;
+		margin-top: 2px;
+		margin-right: 5px;
 	}
 
 	.swiper-button-next:after {
-		margin-left: 3px;
+		margin-top: 2px;
+		margin-left: 5px;
 	}
 
 	.swiper-slide__image {
@@ -72,8 +74,8 @@
 	}
 
 	.btn-alt {
-		padding: 7px 10px;
-		font-size: 14px;
+		padding: 11px 15px;
+		font-size: 15px;
 	}
 
 	.swiper-slide__author {
@@ -91,6 +93,40 @@
 
 		.swiper-slide__inner {
 			padding: 20px 50px;
+		}
+	}
+
+	@include resolution(mobile-portrait) {
+		.swiper-slide__inner {
+			padding: 20px 33px;
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			width: 25px;
+			height: 25px;
+
+			&:after {
+				font-size: 13px;
+			}
+		}
+
+		.swiper-button-prev {
+			left: 4px;
+
+			&:after {
+				margin-top: 1.5px;
+				margin-right: 3px;
+			}
+		}
+
+		.swiper-button-next {
+			right: 4px;
+
+			&:after {
+				margin-top: 1.5px;
+				margin-left: 3px;
+			}
 		}
 	}
 }

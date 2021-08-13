@@ -1,18 +1,23 @@
 {
-    "name": "automattic/underscores",
+    "name": "gkeranov/interior-design-theme",
     "type": "wordpress-theme",
-    "description": "Description",
+    "description": "Custom wordpress theme for interior designers",
     "keywords": [
         "WordPress",
-        "Themes"
+        "Themes",
+        "Interior Design"
     ],
-    "homepage": "https://github.com/Automattic/_s",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
+            "name": "Georgi Keranov",
+            "email": "georgy.keranov@gmail.com",
+            "homepage": "https://github.com/GeorgiKeranov"
+        },
+        {
             "name": "Contributors",
             "homepage": "https://github.com/Automattic/_s/graphs/contributors"
-        }
+        },
     ],
     "require": {
         "php": ">=5.6",
@@ -22,8 +27,4 @@
     },
     "scripts": {
     },
-    "support": {
-        "issues": "https://github.com/Automattic/_s/issues",
-        "source": "https://github.com/Automattic/_s"
-    }
 }

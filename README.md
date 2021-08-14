@@ -13,6 +13,7 @@ Interior Design Theme is based on Underscores https://underscores.me/ by Automat
 - HTML5
 - SASS
 - jQuery
+- Carbon Fields (Custom fields like ACF plugin but specifically for developers)
 
 ## Installation
 

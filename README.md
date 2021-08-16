@@ -10,10 +10,9 @@ Interior Design Theme is based on Underscores https://underscores.me/ by Automat
 - [Theme Functionalities](#theme-functionalities)
   - [Header](#header) 
   - [Footer](#footer)
-  - [Shortcodes](#shortcodes)
   - [Page Templates](#page-templates)
+  - [Shortcodes](#shortcodes)
 - [Installation](#installation)
-- [Pictures](#pictures)
 
 ## Technologies used
 - Wordpress 5.8
@@ -24,27 +23,20 @@ Interior Design Theme is based on Underscores https://underscores.me/ by Automat
 - SASS
 - jQuery
 - Carbon Fields (Custom fields like ACF plugin but specifically for developers)
+- MySQL
 
 ## Theme Functionalities
 
 ### Header
-  Header contains three menus - two for desktop and one for mobile.\n
-  They can be managed from Admin Panel/Appearance/Menus.
+Header contains three menus - two for desktop and one for mobile.\
+They can be managed from Admin Panel/Appearance/Menus.
 
 ---------------------
 
 ### Footer
-  Footer contains menu, phone number, email, socials and copyright.\n
-  Menu can be managed from Admin Panel/Appearance/Menus.\n
-  Phone number, email, socials and copyright can be managed from Admin Panel/Theme Options.
-
----------------------
-
-### Shortcodes
-
-`[year]`
-
-Use this shortcode to display the current year.
+Footer contains menu, phone number, email, socials and copyright.\
+Menu can be managed from Admin Panel/Appearance/Menus.\
+Phone number, email, socials and copyright can be managed from Admin Panel/Theme Options.
 
 ---------------------
 
@@ -53,6 +45,14 @@ Use this shortcode to display the current year.
 #### Page Builder
 
 This template has different sections that can be used in the order you want.
+
+---------------------
+
+### Shortcodes
+
+`[year]`
+
+Use this shortcode to display the current year.
 
 ---------------------
 
@@ -79,7 +79,3 @@ $ npm install
 - `npm run compile:css` : compiles SASS files to css.
 - `npm run watch` : watches all SASS files and recompiles them to css when they change.
 - `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
-
-## Pictures
-
-TODO add pictures

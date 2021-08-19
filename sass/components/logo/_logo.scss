@@ -1,8 +1,8 @@
 .logo {
 	display: block;
-	width: 120px;
-	height: 94px;
-	background-image: url(images/logo.svg);
+	width: 137px;
+	height: 48px;
+	background-image: url(images/logo.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	transition: opacity .5s;
@@ -13,7 +13,12 @@
 }
 
 .logo--white {
-	width: 160px;
-	height: 125px;
-	background-image: url(images/logo-white.svg);
+	width: 274px;
+	height: 96px;
+	background-image: url(images/logo-white.png);
+
+	@include resolution(mobile-portrait) {
+		width: 137px;
+		height: 48px;
+	}
 }

@@ -29,12 +29,15 @@
 		padding-top: 100%;
 		overflow: hidden;
 
-		img {
+		.section__thumbnail-background-image {
 			position: absolute;
 			top: 0;
 			bottom: 0;
 			left: 0;
 			right: 0;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 			transition: transform 4s ease-out;
 		}
 
@@ -103,7 +106,7 @@
 
 	.section__project:hover {
 		.section__thumbnail {
-			img {
+			.section__thumbnail-background-image {
 				transform: scale(1.2);
 			}
 

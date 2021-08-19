@@ -9,7 +9,7 @@
 	}
 
 	figure {
-		width: 16.66%;
+		width: 33.33%;
 		margin: 0;
 		line-height: 0;
 		padding: 2px;
@@ -55,21 +55,17 @@
 
 	@include resolution(tablet-portrait) {
 		figure {
-			width: 25%;
+			width: 50%;
 		}
 	}
 
 	@include resolution(mobile) {
 		margin-bottom: 40px;
-
-		figure {
-			width: 33.33%;
-		}
 	}
 
 	@include resolution(mobile-portrait) {
 		figure {
-			width: 50%;
+			width: 100%;
 		}
 	}
 }

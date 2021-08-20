@@ -6,7 +6,7 @@ if ( empty( $args ) ) {
 foreach ( $args as $post ) :
 	$post_id = $post->ID;
 	$post_title = $post->post_title;
-	$post_thumbnail_url = get_the_post_thumbnail_url( $post_id, 'medium_large_fixed' );
+	$post_thumbnail_url = get_the_post_thumbnail_url( $post_id, 'medium_cropped' );
 	$post_permalink = get_the_permalink( $post_id ); 
 
 	if ( empty( $post_thumbnail_url ) ) {

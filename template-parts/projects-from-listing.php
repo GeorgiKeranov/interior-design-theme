@@ -13,7 +13,7 @@ foreach ( $projects as $project_id ) :
 	$project_title = get_the_title( $project_id );
 	$project_permalink = get_the_permalink( $project_id );
 	$project_thumbnail_id = get_post_thumbnail_id( $project_id );
-	$project_thumbnail_url = wp_get_attachment_image_url( $project_thumbnail_id, 'medium_large_fixed' ); ?>
+	$project_thumbnail_url = wp_get_attachment_image_url( $project_thumbnail_id, 'medium_cropped' ); ?>
 
 	<div class="section__project">
 		<?php if ( !empty( $project_thumbnail_url ) ) : ?>

@@ -116,9 +116,6 @@ if ( ! function_exists( 'idt_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
-
-		add_image_size( 'medium_fixed', '450', '450', true );
-		add_image_size( 'medium_large_fixed', '768', '768', true );
 	}
 endif;
 add_action( 'after_setup_theme', 'idt_setup' );
@@ -191,6 +188,11 @@ function idt_custom_options() {
 	include_once( IDT_THEME_DIR . '/custom-options/shortcodes.php' );
 }
 add_action( 'init', 'idt_custom_options', 0 );
+
+/**
+ * Add custom image sizes to wordpress
+ */
+require IDT_THEME_DIR . '/inc/image-sizes.php';
 
 /**
  * Add loading of new pages on scroll and category change

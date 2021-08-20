@@ -1,5 +1,10 @@
 @mixin resolution($device){
-	@if $device == mobile-portrait {
+	@if $device == mobile-small {
+		@media (max-width: 500px) {
+			@content;
+		}
+	}
+	@else if $device == mobile-portrait {
 		@media (max-width: 600px) {
 			@content;
 		}

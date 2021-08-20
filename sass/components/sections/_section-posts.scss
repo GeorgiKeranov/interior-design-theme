@@ -102,10 +102,6 @@
 	}
 
 	@include resolution(tablet-portrait) {
-		.section__post {
-			width: 50%;
-		}
-
 		.section__title {
 			h2 {
 				font-size: 20px;
@@ -115,6 +111,10 @@
 	}
 
 	@include resolution(mobile) {
+		.section__post {
+			width: 50%;
+		}
+
 		.section__title {
 			padding: 0;
 
@@ -128,7 +128,7 @@
 		}
 	}
 
-	@include resolution(mobile-portrait) {
+	@include resolution(mobile-small) {
 		.section__post {
 			width: 100%;
 			margin-bottom: 15px;

@@ -95,7 +95,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 		if(index >= 0) {
 			// open PhotoSwipe if valid index found
-			openPhotoSwipe( index, clickedGallery );
+			openPhotoSwipe( index, clickedGallery, true );
 		}
 		return false;
 	};
@@ -141,16 +141,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 			// define gallery index (for URL)
 			galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-			getThumbBoundsFn: function(index) {
-				// See Options -> getThumbBoundsFn section of documentation for more info
-				var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-					pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-					rect = thumbnail.getBoundingClientRect(); 
-
-				return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-			}
-
 		};
 
 		// PhotoSwipe opened from URL
@@ -197,7 +187,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 	// Parse URL and open gallery if it contains #&pid=3&gid=1
 	var hashData = photoswipeParseHash();
 	if(hashData.pid && hashData.gid) {
-		openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+		openPhotoSwipe( hashData.pid, galleryElements[ hashData.gid - 1 ], true, true );
 	}
 };
 

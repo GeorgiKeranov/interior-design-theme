@@ -16,9 +16,13 @@
 	}
 
 	a {
-		display: inline-block;
+		display: block;
 		position: relative;
-		
+		padding-top: 60%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
 		&:before {
 			content: '';
 			display: inline-block;

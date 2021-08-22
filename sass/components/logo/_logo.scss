@@ -1,7 +1,7 @@
 .logo {
 	display: block;
-	width: 135px;
-	height: 47px;
+	width: 132px;
+	height: 46px;
 	background-image: url(images/logo.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -13,12 +13,12 @@
 }
 
 .logo--white {
-	width: 270px;
-	height: 94px;
+	width: 264px;
+	height: 92px;
 	background-image: url(images/logo-white.png);
 
 	@include resolution(mobile-portrait) {
-		width: 135px;
-		height: 47px;
+		width: 132px;
+		height: 46px;
 	}
 }

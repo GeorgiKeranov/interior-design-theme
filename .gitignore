@@ -1,6 +1,5 @@
 vendor*
 node_modules*
-/components*
 style.css
 style.css.map
 style-rtl.css

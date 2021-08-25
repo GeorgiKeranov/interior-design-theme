@@ -28,15 +28,17 @@ Interior Design Theme is based on Underscores https://underscores.me/ by Automat
 ## Theme Functionalities
 
 ### Header
-Header contains three menus - two for desktop and one for mobile.\
-They can be managed from Admin Panel/Appearance/Menus.
+Header contains logo and three menus - two for desktop and one for mobile.\
+Logo can be changed from Admin Panel/Theme Options/Header/Logo.\
+Menus can be managed from Admin Panel/Appearance/Menus.
 
 ---------------------
 
 ### Footer
-Footer contains menu, phone number, email, socials and copyright.\
+Footer contains logo, menu, phone number, email, socials and copyright.\
+Logo can be changed from Admin Panel/Theme Options/Footer/Logo.\
 Menu can be managed from Admin Panel/Appearance/Menus.\
-Phone number, email, socials and copyright can be managed from Admin Panel/Theme Options.
+Phone number, email, socials and copyright can be managed from Admin Panel/Theme Options/Footer.
 
 ---------------------
 

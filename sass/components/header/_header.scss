@@ -59,6 +59,10 @@
 	}
 
 	@include resolution(tablet-portrait) {
+		.header__inner {
+			min-height: 45px;	
+		}
+
 		.header__left,
 		.header__right {
 			display: none;

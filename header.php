@@ -39,7 +39,7 @@
 				</div><!-- /.header__left -->
 
 				<div class="header__center">
-					<a href="<?php echo home_url('/') ?>" class="logo"></a>
+					<?php idt_the_header_logo(); ?>
 				</div><!-- /.header__center -->
 
 				<div class="header__right">

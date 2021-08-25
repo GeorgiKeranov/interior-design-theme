@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="footer__main">
 				<div class="footer__logo">
-					<a href="<?php echo home_url('/') ?>" class="logo logo--white"></a>
+					<?php idt_the_footer_logo(); ?>
 				</div><!-- /.footer__logo -->
 
 				<div class="footer__menu">

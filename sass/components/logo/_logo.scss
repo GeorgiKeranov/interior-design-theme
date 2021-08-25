@@ -1,24 +1,10 @@
 .logo {
 	display: block;
-	width: 132px;
-	height: 46px;
-	background-image: url(images/logo.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	transition: opacity .5s;
 
 	&:hover {
 		opacity: .4;
-	}
-}
-
-.logo--white {
-	width: 264px;
-	height: 92px;
-	background-image: url(images/logo-white.png);
-
-	@include resolution(mobile-portrait) {
-		width: 132px;
-		height: 46px;
 	}
 }

@@ -250,3 +250,8 @@ require IDT_THEME_DIR . '/inc/page-functions.php';
  */
 require IDT_THEME_DIR . '/inc/admin-pages-customization.php';
 
+
+/**
+ * Add functionalities for dynamic logo on header and footer
+ */
+require IDT_THEME_DIR . '/inc/logo-dynamic.php';

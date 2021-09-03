@@ -15,7 +15,7 @@ Interior Design Theme is based on Underscores https://underscores.me/ by Automat
 - [Installation](#installation)
 
 ## Technologies used
-- Wordpress 5.8
+- WordPress 5.8
 - PHP 7.4
 - JavaScript (ES6)
 - CSS3

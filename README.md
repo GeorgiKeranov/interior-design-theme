@@ -1,7 +1,7 @@
 # Interior Design Theme
 
-Custom Wordpress theme built for interior designers to show their projects to the potential customers.
-The theme is responsive and it is fully customizable from the Wordpress admin panel via custom fields.
+Custom WordPress theme built for interior designers to show their projects to potential customers.\
+The theme is responsive and it is fully customizable from the WordPress admin panel via custom fields.
 
 Interior Design Theme is based on Underscores https://underscores.me/ by Automattic.
 

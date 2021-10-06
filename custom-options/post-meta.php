@@ -9,6 +9,8 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 	->where( 'post_template', '=', 'templates/page-builder.php' )
 	->add_fields( array(
 		Field::make( 'complex', 'idt_page_builder_sections', '' )
+			->set_layout( 'tabbed-vertical' )
+			
 			/**
 			 * Heading
 			 */

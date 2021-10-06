@@ -78,7 +78,6 @@ $ yarn install
 
 ### Available CLI commands
 
-- `yarn watch:css` : watches all SASS and recompiles the bundle css file when they change.
-- `yarn watch:js` : watches all JavaScript and recompiles the bundle js file when they change.
-- `yarn compile` : compiles all SASS and JavaScript files to one css and one js file.
+- `yarn watch` : watches all SASS files and recompiles them to css when they change.
+- `yarn compile:css` : compiles SASS files to css.
 - `yarn bundle` : generates a .zip archive for distribution, excluding development and system files.

@@ -3,7 +3,7 @@
 use Carbon_Fields\Container\Container;
 use Carbon_Fields\Field\Field;
 
-Container::make( 'theme_options', __( 'Опции на Темата', 'idt' ) )
+Container::make( 'theme_options', 'idt_theme_options', __( 'Опции на Темата', 'idt' ) )
 	->set_page_file( 'idt-theme-options.php' )
 	->add_tab( __( 'Заглавна част (най-отгоре на сайта)', 'idt' ), array(
 		Field::make( 'image', 'idt_header_logo', __( 'Лого', 'idt' ) )

@@ -5,7 +5,7 @@ use Carbon_Fields\Field;
 /**
  * Page Builder
  */
-Container::make( 'post_meta', __( 'Елементи на страница', 'idt' ) )
+Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на страница', 'idt' ) )
 	->where( 'post_template', '=', 'templates/page-builder.php' )
 	->add_fields( array(
 		Field::make( 'complex', 'idt_page_builder_sections', '' )
@@ -276,7 +276,7 @@ Container::make( 'post_meta', __( 'Елементи на страница', 'idt
 /**
  * Single Project
  */
-Container::make( 'post_meta', __( 'Настройки', 'idt' ) )
+Container::make( 'post_meta', 'idt_single_project', __( 'Настройки', 'idt' ) )
 	->where( 'post_type', '=', 'idt_project' )
 	->add_fields( array(
 		Field::make( 'media_gallery', 'idt_gallery', __( 'Галерия', 'idt' ) )

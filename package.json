@@ -24,6 +24,6 @@
   "scripts": {
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
     "compile:css": "node-sass sass/ -o ./",
-    "bundle": "dir-archiver --src . --dest ../interior-design-theme.zip --exclude .DS_Store .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map"
+    "bundle": "dir-archiver --src . --dest ../interior-design-theme.zip --exclude .DS_Store .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules package-lock.json package.json yarn.lock .travis.yml phpcs.xml.dist sass style.css.map"
   }
 }

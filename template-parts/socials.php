@@ -3,6 +3,7 @@ $socials = array(
 	'facebook' => carbon_get_theme_option( 'idt_facebook_link' ),
 	'instagram' => carbon_get_theme_option( 'idt_instagram_link' ),
 	'youtube' => carbon_get_theme_option( 'idt_youtube_link' ),
+	'viber' => carbon_get_theme_option( 'idt_viber_link' ),
 );
 
 // Clear array elements for empty social links

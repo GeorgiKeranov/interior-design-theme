@@ -17,5 +17,6 @@ Container::make( 'theme_options', 'idt_theme_options', __( 'Опции на Те
 		Field::make( 'text', 'idt_facebook_link', __( 'Линк към Facebook', 'idt' ) ),
 		Field::make( 'text', 'idt_instagram_link', __( 'Линк към Instagram', 'idt' ) ),
 		Field::make( 'text', 'idt_youtube_link', __( 'Линк към Youtube', 'idt' ) ),
+		Field::make( 'text', 'idt_viber_link', __( 'Линк към Viber', 'idt' ) ),
 		Field::make( 'text', 'idt_copyright', __( 'Копирайт', 'idt' ) ),
 	) );

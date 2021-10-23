@@ -21,11 +21,13 @@
 
 					<p><a href="mailto:<?php echo $email ?>"><?php echo idt_get_svg('icon-mail') . ' ' . $email ?></a></p>
 				<?php endif; ?>
+				
+				<?php get_template_part( 'template-parts/socials' ) ?>
 
 				<?php if ( !empty( $args['work_time_title'] ) ) : ?> 
 					<h4><?php echo esc_html( $args['work_time_title'] ) ?></h4>
 				<?php endif; ?>
-				
+
 				<?php if ( !empty( $args['work_time_rows'] ) ) : ?>
 					<?php foreach ( $args['work_time_rows'] as $row ) : ?>
 						<div class="section__work-time">

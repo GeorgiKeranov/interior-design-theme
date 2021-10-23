@@ -14,7 +14,7 @@ if ( empty( $socials ) ) {
 }
 ?>
 
-<ul>
+<ul class="socials">
 	<?php foreach ( $socials as $name => $link ) : ?>
 		<li>
 			<a href="<?php echo esc_url( $link ) ?>" target="_blank"><?php echo idt_get_svg('icon-' . $name) ?></a>

@@ -5,20 +5,6 @@ The theme is responsive and it is fully customizable from the WordPress admin pa
 
 Interior Design Theme is based on Underscores https://underscores.me/ by Automattic.
 
-Page builder contains these sections:
-- Heading
-- Selected Projects
-- Projects
-- Text Columns with Background Image
-- Text Columns with Checkboxes
-- Text with Image
-- Text with Wide Image
-- Text with Form
-- Contact Text with Form
-- Image with Tabs
-- Columns with Icon and Text
-- Testimonials Slider
-
 ## Table of contents
 - [Technologies used](#technologies-used)
 - [Theme Functionalities](#theme-functionalities)
@@ -61,6 +47,20 @@ Phone number, email, socials and copyright can be managed from Admin Panel/Theme
 #### Page Builder
 
 This template has different sections that can be used in the order you want.
+
+Page builder contains these sections:
+- Heading
+- Selected Projects
+- Projects
+- Text Columns with Background Image
+- Text Columns with Checkboxes
+- Text with Image
+- Text with Wide Image
+- Text with Form
+- Contact Text with Form
+- Image with Tabs
+- Columns with Icon and Text
+- Testimonials Slider
 
 ---------------------
 

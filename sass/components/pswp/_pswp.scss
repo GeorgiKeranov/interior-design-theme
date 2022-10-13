@@ -59,17 +59,17 @@
 		font-size: 80px;
 		color: #fff;
 		line-height: 0.8;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: transparent;
 		height: auto;
 		width: auto;
 	}
 
 	.pswp__button--arrow--left:before {
-		content: '🠔';
+		content: '❮';
 	}
 
 	.pswp__button--arrow--right:before {
-		content: '🠖';
+		content: '❯';
 	}
 
 

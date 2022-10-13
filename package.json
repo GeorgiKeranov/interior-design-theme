@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "dir-archiver": "^1.1.1",
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.3"
   },
   "scripts": {
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",

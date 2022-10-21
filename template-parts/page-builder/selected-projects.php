@@ -15,7 +15,7 @@ foreach ( $projects as $project ) {
 
 	<div class="section__cta">
 		<div class="container">
-			<a href="<?php echo get_post_type_archive_link( 'idt_project' ) ?>" class="btn"><?php _e( 'Разгледай всички проекти', 'idt' ) ?></a>
+			<?php idt_render_button( $args['btn_text'], $args['btn_link'], $args['btn_new_tab'], 'btn' ) ?>
 		</div><!-- /.container -->
 	</div><!-- /.section__cta -->
 </section><!-- /.section-projects -->

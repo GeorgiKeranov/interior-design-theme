@@ -31,7 +31,17 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 							'type' =>'post',
 							'post_type' => 'idt_project'
 						)
+					) ),
+				Field::make( 'text', 'btn_text', __( 'Текст на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'text', 'btn_link', __( 'Линк на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'select', 'btn_new_tab', __( 'Да се отваря ли линкът на бутона в нов таб', 'idt' ) )
+					->set_options( array(
+						'no' => __( 'Не', 'idt' ),
+						'yes' => __( 'Да', 'idt' ),
 					) )
+					->set_width( 33 ),
 			) )
 
 			/**

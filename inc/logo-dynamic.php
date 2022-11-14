@@ -9,7 +9,22 @@ function idt_the_header_logo() {
 	$header_logo_details['width'] = intval( $header_logo_details['width'] / 2 );
 	$header_logo_details['height'] = intval( $header_logo_details['height'] / 2 ); ?>
 
-	<a href="<?php echo home_url('/') ?>" class="logo" style="background-image:url(<?php echo $header_logo_details['url'] ?>); width: <?php echo $header_logo_details['width'] ?>px; height: <?php echo $header_logo_details['height'] ?>px;"></a>
+	<style>
+		.logo--header {
+			background-image:url(<?php echo $header_logo_details['url'] ?>);
+			width: <?php echo $header_logo_details['width'] ?>px;
+			height: <?php echo $header_logo_details['height'] ?>px;
+		}
+
+		@media (max-width: 600px) {
+			.logo--header {
+				width: <?php echo $header_logo_details['width'] / 1.5 ?>px;
+				height: <?php echo $header_logo_details['height'] / 1.5 ?>px;
+			}
+		}
+	</style>
+
+	<a href="<?php echo home_url('/') ?>" class="logo logo--header"></a>
 
 	<?php
 }

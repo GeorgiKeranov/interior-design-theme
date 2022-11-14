@@ -201,11 +201,15 @@
 		.section__cta {
 			margin: 30px 0;
 		}
-	}
 
-	@include resolution(mobile-small) {
-		.section__project {
-			width: 100%;
+		.section__title {
+			display: none;
+		}
+
+		.section__view-project {
+			a {
+				font-size: 11px;
+			}
 		}
 	}
 }

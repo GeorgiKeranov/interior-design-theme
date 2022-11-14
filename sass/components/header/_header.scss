@@ -55,7 +55,7 @@
 	}
 
 	@include resolution(desktop-small) {
-		padding: 4px 0;
+		padding: 5px 0;
 	}
 
 	@include resolution(tablet-portrait) {
@@ -105,6 +105,40 @@
 			.nav-mobile {
 				visibility: visible;
 				opacity: 1;
+			}
+		}
+	}
+	
+	@include resolution(mobile) {
+		.header__inner {
+			min-height: 30px;
+		}
+
+		.header__menu-toggle {
+			width: 30px;
+			height: 17px;
+
+			div {
+				height: 3px;
+
+				&:nth-child(2) {
+					top: 7px;
+				}
+	
+				&:nth-child(3) {
+					top: 14px;
+				}
+			}
+		}
+
+		.header__menu-mobile--active {
+			.header__menu-toggle {
+				div {
+					&:nth-child(1),
+					&:nth-child(3) {
+						top: 7px;
+					}
+				}
 			}
 		}
 	}

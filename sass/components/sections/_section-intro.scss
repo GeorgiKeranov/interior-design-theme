@@ -1,0 +1,43 @@
+.section-intro {
+  position: relative;
+  padding: 100px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(48, 48, 48, 0.55);
+    z-index: 1; 
+  }
+
+  .container-small {
+    position: relative;
+    z-index: 10;
+  }
+
+  .section__actions {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+	@include resolution(tablet-portrait) {
+	}
+
+	@include resolution(mobile) {
+  }
+}

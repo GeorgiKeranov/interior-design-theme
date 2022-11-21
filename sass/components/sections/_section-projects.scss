@@ -26,7 +26,7 @@
 
 	.section__thumbnail {
 		position: relative;
-		padding-top: 100%;
+		padding-top: 65%;
 		overflow: hidden;
 
 		.section__thumbnail-background-image {
@@ -194,6 +194,10 @@
 	@include resolution(mobile) {
 		.section__project {
 			width: 50%;
+		}
+
+		.section__thumbnail {
+			padding-top: 75%;
 		}
 	}
 

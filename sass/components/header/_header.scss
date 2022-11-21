@@ -1,8 +1,10 @@
 .header {
 	position: sticky;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 100;
-	background: #ffffff;
+	background: rgba(255, 255, 255, 0.6);
 	padding: 10px 0;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
 

@@ -20,6 +20,35 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 				Field::make( 'textarea', 'description', __( 'Описание', 'idt' ) ),
 			) )
 
+			/**
+			 * Intro
+			 */
+			->add_fields( 'intro', __( 'Интро', 'idt' ), array(
+				Field::make( 'image', 'background_image', __( 'Снимка за фон', 'idt' ) ),
+				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
+				Field::make( 'separator', 'btn_left', __( 'Ляв бутон', 'idt' ) ),
+				Field::make( 'text', 'btn_left_text', __( 'Текст на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'text', 'btn_left_link', __( 'Линк на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'select', 'btn_left_new_tab', __( 'Да се отваря ли линкът на бутона в нов таб', 'idt' ) )
+					->set_options( array(
+						'no' => __( 'Не', 'idt' ),
+						'yes' => __( 'Да', 'idt' ),
+					) )
+					->set_width( 33 ),
+				Field::make( 'separator', 'btn_right', __( 'Десен бутон', 'idt' ) ),
+				Field::make( 'text', 'btn_right_text', __( 'Текст на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'text', 'btn_right_link', __( 'Линк на бутон', 'idt' ) )
+					->set_width( 33 ),
+				Field::make( 'select', 'btn_right_new_tab', __( 'Да се отваря ли линкът на бутона в нов таб', 'idt' ) )
+					->set_options( array(
+						'no' => __( 'Не', 'idt' ),
+						'yes' => __( 'Да', 'idt' ),
+					) )
+					->set_width( 33 ),
+			) )
 
 			/**
 			 * Selected Projects

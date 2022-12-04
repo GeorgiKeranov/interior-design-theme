@@ -6,7 +6,9 @@ if ( !empty( $args['background_image'] ) ) {
 }
 ?>
 
-<div class="section-intro"<?php echo $background_image ?>>
+<div class="section-intro">
+  <div class="section__background"<?php echo $background_image ?>></div>
+  
   <div class="container">
     <div class="section__text">
       <?php echo apply_filters( 'the_content', $args['text'] ) ?>

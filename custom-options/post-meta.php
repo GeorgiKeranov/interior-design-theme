@@ -53,7 +53,7 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 			/**
 			 * Selected Projects
 			 */
-			->add_fields( 'selected-projects', __( 'Селектирани Проекти', 'idt' ), array(
+			->add_fields( 'selected-projects', __( 'Само избрани проекти', 'idt' ), array(
 				Field::make( 'association', 'idt_selected_projects', __( 'Избери проекти', 'idt' ) )
 					->set_types( array(
 						array(
@@ -76,8 +76,34 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 			/**
 			 * Projects
 			 */
-			->add_fields( 'projects', __( 'Всички Проекти', 'idt' ), array(
+			->add_fields( 'projects', __( 'Всички проекти', 'idt' ), array(
 				Field::make( 'separator', 'projects_separator', __( 'Всички категории на проекти и проекти ще бъдат генерирани автоматично', 'idt' ) )
+			) )
+
+			/**
+			 * Prices
+			 */
+			->add_fields( 'prices', __( 'Цени', 'idt' ), array(
+				Field::make( 'text', 'title', __( 'Заглавие', 'idt' ) ),
+				Field::make( 'complex', 'prices', __( 'Ценови колони', 'idt' ) )
+					->set_max(3)
+					->set_layout( 'tabbed-horizontal' )
+					->add_fields( array(
+						Field::make( 'text', 'title', __( 'Заглавие', 'idt' ) ),
+						Field::make( 'text', 'price', __( 'Цена', 'idt' ) ),
+						Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
+						Field::make( 'text', 'btn_text', __( 'Текст на бутон', 'idt' ) )
+							->set_width( 33 ),
+						Field::make( 'text', 'btn_link', __( 'Линк на бутон', 'idt' ) )
+							->set_width( 33 ),
+						Field::make( 'select', 'btn_new_tab', __( 'Да се отваря ли линкът на бутона в нов таб', 'idt' ) )
+							->set_options( array(
+								'no' => __( 'Не', 'idt' ),
+								'yes' => __( 'Да', 'idt' ),
+							) )
+							->set_width( 33 ),
+					) )
+					->set_header_template( '<%- title %>' ),
 			) )
 
 			/**

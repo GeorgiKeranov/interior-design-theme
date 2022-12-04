@@ -1,3 +1,7 @@
+/* Main
+--------------------------------------------- */
+@import "main/main";
+
 /* Navigation
 --------------------------------------------- */
 @import "navigation/navigation";
@@ -55,6 +59,7 @@
 @import "sections/section-intro";
 @import "sections/section-form";
 @import "sections/section-projects";
+@import "sections/section-prices";
 @import "sections/section-cols";
 @import "sections/section-txt-cols-with-image";
 @import "sections/section-txt-cols-with-checkboxes";

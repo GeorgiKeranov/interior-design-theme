@@ -1,12 +1,13 @@
 .header {
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
-	background: rgba(255, 255, 255, 0.6);
+	background: #fff;
 	padding: 10px 0;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
+	transition: .3s;
 
 	.header__inner {
 		display: flex;
@@ -142,6 +143,31 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.header--transparent {
+	box-shadow: none;
+	background: transparent;
+
+	.logo--header {
+		background-image: url(images/logo-white.png);
+	}
+
+	.header__menu-toggle {
+		div {
+			background-color: #fff;
+		}
+	}
+
+	.nav {
+		a {
+			color: #ddd;
+		}
+
+		ul > li:after {
+			background-color: #ddd;
 		}
 	}
 }

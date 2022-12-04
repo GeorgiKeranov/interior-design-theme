@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'idt' ); ?></a>
 
-	<header class="header">
+	<header class="header<?php echo is_front_page() ? ' header--transparent' : '' ?>">
 		<div class="container">
 			<div class="header__inner">
 				<div class="header__left">
@@ -39,7 +39,7 @@
 				</div><!-- /.header__left -->
 
 				<div class="header__center">
-					<?php idt_the_header_logo(); ?>
+					<a href="<?php echo home_url('/') ?>" class="logo logo--header"></a>
 				</div><!-- /.header__center -->
 
 				<div class="header__right">

@@ -3,26 +3,25 @@
 	padding: 15px 30px;
 	text-decoration: none;
 	border: 2px solid $color__button;
-	background-color: white;
-	color: $color__button;
-	font-size: 19px;
+	background-color: $color__button;
+	color: white;
+	font-size: 17px;
 	font-weight: 700;
-	border-radius: 40px;
 	transition: background-color .5s, color .5s;
 	text-transform: uppercase;
 	line-height: 1;
+	border-radius: 30px;
 
 	&:hover {
-		background-color: $color__button;
-		color: white;
+		background-color: white;
+		color: $color__button;
 	}
 
 	@include resolution(desktop-small) {
-		font-size: 18px;
 	}
 
 	@include resolution(mobile) {
-		font-size: 17px;
+		font-size: 14px;
 		padding: 10px 15px;
 	}
 }
@@ -47,7 +46,7 @@
 	}
 
 	@include resolution(mobile) {
-		font-size: 17px;
-		padding: 10px 15px;
+		font-size: 15px;
+		padding: 12px 25px;
 	}
 }

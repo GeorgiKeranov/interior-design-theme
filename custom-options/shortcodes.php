@@ -35,7 +35,7 @@ function idt_shortcode_button( $atts, $content ) {
 add_shortcode( 'phone', 'idt_shortcode_phone' );
 function idt_shortcode_phone( $atts, $content ) {
 	ob_start(); ?>
-	<a class="btn-phone" href="tel:<?php echo $content ?>"><?php echo idt_get_svg('icon-phone') ?> <?php echo $content ?></a>
+	<a class="btn-phone" href="tel:<?php echo idt_filter_phone_number($content) ?>"><?php echo idt_get_svg('icon-phone') ?> <?php echo $content ?></a>
 	<?php
 	$html = ob_get_clean();
 	return $html;

@@ -58,4 +58,4 @@
 			</div><!-- /.section__form -->
 		</div><!-- /.section__cols -->
 	</div><!-- /.container -->
-</div><!-- /.section-txt-with-form -->
+</div><!-- /.section-contact-txt-with-form -->

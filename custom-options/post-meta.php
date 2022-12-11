@@ -215,18 +215,9 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 			) )
 
 			/**
-			 * Text With Form
+			 * Contacts
 			 */
-			->add_fields( 'text-with-form', __( 'Текст със форма', 'idt' ), array(
-				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
-				Field::make( 'text', 'form_shortcode', __( 'Форма шорткод', 'idt' ) )
-					->set_help_text( 'Шорткода на формата можете да намерите в Админ панел -> WPForms -> Shortcode' ),
-			) )
-
-			/**
-			 * Contact text with form
-			 */
-			->add_fields( 'contact-text-with-form', __( 'Контакти текст с форма', 'idt' ), array(
+			->add_fields( 'contact-text-with-form', __( 'Контакти', 'idt' ), array(
 				Field::make( 'checkbox', 'add_breadcrumbs', __( 'Добави линкове за страници' ) ),
 				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
 				Field::make( 'text', 'phone', __( 'Телефон', 'idt' ) ),
@@ -244,23 +235,6 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 				Field::make( 'rich_text', 'form_text', __( 'Текст над формата', 'idt' ) ),
 				Field::make( 'text', 'form_shortcode', __( 'Форма шорткод', 'idt' ) )
 					->set_help_text( 'Шорткода на формата можете да намерите в Админ панел -> WPForms -> Shortcode' )
-			) )
-
-			/**
-			 * Image with tabs
-			 */
-			->add_fields( 'image-with-tabs', __( 'Снимка с табове', 'idt' ), array(
-				Field::make( 'checkbox', 'add_breadcrumbs', __( 'Добави линкове за страници' ) ),
-				Field::make( 'image', 'image', __( 'Снимка', 'idt' ) ),
-				Field::make( 'complex', 'tabs', __( 'Табове', 'idt' ) )
-					->set_layout( 'tabbed-vertical' )
-					->add_fields( array(
-						Field::make( 'text', 'title', __( 'Заглавие', 'idt' ) )
-							->set_required( true ),
-						Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) )
-							->set_required( true ),
-					) )
-					->set_header_template( '<%- title %>' ),
 			) )
 
 			/**

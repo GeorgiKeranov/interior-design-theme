@@ -1,6 +1,6 @@
 .section-testimonials-slider {
 	padding: 40px 0;
-	background-color: #f6f6f6;
+	background-color: $color__grey-light;
 
 	h2 {
 		text-transform: uppercase;
@@ -17,6 +17,7 @@
 		font-family: serif;
 		margin-top: -15px;
     margin-right: 5px;
+		color: #f82e2f;
 	}
 
 	p {

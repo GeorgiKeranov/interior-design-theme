@@ -109,14 +109,11 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 			) )
 
 			/**
-			 * Text Columns With Background Image
+			 * Text With Background Image
 			 */
-			->add_fields( 'text-columns-with-background-image', __( 'Текстови колони със снимка за фон', 'idt' ), array(
+			->add_fields( 'text-with-background-image', __( 'Текст със снимка за фон', 'idt' ), array(
 				Field::make( 'image', 'background_image', __( 'Снимка за фон', 'idt' ) ),
-				Field::make( 'rich_text', 'text_left', __( 'Текст в лява колона', 'idt' ) )
-					->set_width( 50 ),
-				Field::make( 'rich_text', 'text_right', __( 'Текст в дясна колона', 'idt' ) )
-					->set_width( 50 ),
+				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) )
 			) )
 
 			/**
@@ -302,39 +299,17 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 					->add_fields( array(
 						Field::make( 'image', 'image', __( 'Снимка на автор', 'idt' ) ),
 						Field::make( 'textarea', 'testimonial', __( 'Препоръка', 'idt' ) ),
-						Field::make( 'checkbox', 'add_btn', __( 'Добави бутон', 'idt' ) ),
+						Field::make( 'text', 'name', __( 'Име на автор', 'idt' ) ),
 						Field::make( 'text', 'btn_text', __( 'Текст на бутон', 'idt' ) )
-							->set_width( 33 )
-							->set_conditional_logic( array(
-								array(
-									'field' => 'add_btn',
-									'value' => true,
-									'compare' => '='
-								)
-							) ),
+							->set_width( 33 ),
 						Field::make( 'text', 'btn_link', __( 'Линк на бутон', 'idt' ) )
-							->set_width( 33 )
-							->set_conditional_logic( array(
-								array(
-									'field' => 'add_btn',
-									'value' => true,
-									'compare' => '='
-								)
-							) ),
+							->set_width( 33 ),
 						Field::make( 'select', 'btn_new_tab', __( 'Да се отваря ли линкът на бутона в нов таб', 'idt' ) )
 							->set_options( array(
 								'no' => __( 'Не', 'idt' ),
 								'yes' => __( 'Да', 'idt' ),
 							) )
-							->set_width( 33 )
-							->set_conditional_logic( array(
-								array(
-									'field' => 'add_btn',
-									'value' => true,
-									'compare' => '='
-								)
-							) ),
-						Field::make( 'text', 'name', __( 'Име на автор', 'idt' ) ),
+							->set_width( 33 ),
 					) ),
 			) )
 	) );

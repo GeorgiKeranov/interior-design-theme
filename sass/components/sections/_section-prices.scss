@@ -113,12 +113,12 @@
   }
 
   .section__calculator {
-    background-color: #b83636;
+    background: linear-gradient(90deg, rgba(248,46,47,1) 0%, rgba(0,0,0,1) 60%);
     padding: 30px 40px;
     color: #fff;
     text-align: left;
     border-radius: 20px;
-    
+
     h2 {
       text-align: center;
     }
@@ -151,7 +151,7 @@
     margin-bottom: 30px;
   }
 
-  .section__package, .section__quadrature {
+  .section__package, .section__square-meters {
     width: 50%;
   }
 
@@ -166,6 +166,16 @@
       font-size: 20px;
       text-align: center;
       margin-bottom: 0;
+    }
+  }
+
+  .section__calculated-price--show {
+    h2 {
+      display: block;
+    }
+
+    h3 {
+      display: none;
     }
   }
 }

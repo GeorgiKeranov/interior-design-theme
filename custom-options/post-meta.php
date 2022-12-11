@@ -105,6 +105,7 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 					) )
 					->set_header_template( '<%- title %>' ),
 					Field::make( 'text', 'calculator_title', __( 'Заглавие на калкулатор', 'idt' ) ),
+					Field::make( 'text', 'calculator_text', __( 'Текст преди да е въведена квадратура', 'idt' ) ),
 			) )
 
 			/**

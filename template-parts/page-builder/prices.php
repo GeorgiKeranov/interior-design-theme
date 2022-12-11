@@ -45,15 +45,15 @@
             </select>
           </div>
 
-          <div class="section__quadrature">
-            <label for="quadrature"><?php _e( 'Въведи квадратура (кв.м.)', 'idt' )?></label>
+          <div class="section__square-meters">
+            <label for="square-meters"><?php _e( 'Въведи квадратура (кв.м.)', 'idt' )?></label>
 
-            <input type="text" name="quadrature" id="quadrature">
+            <input type="text" name="square-meters" id="square-meters">
           </div>
         </div>
 
         <div class="section__calculated-price">
-          <h3>Mоля въведете квадратура и цената ще ви излезе автоматично</h3>
+          <h3><?php echo esc_html( $args['calculator_text'] ) ?></h3>
           
           <h2><span></span>лв</h2>
         </div>

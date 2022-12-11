@@ -296,12 +296,12 @@ Container::make( 'post_meta', 'idt_page_builder', __( 'Елементи на с�
 			 * Testimonials Slider
 			 */
 			->add_fields( 'testimonials-slider', __( 'Слайдер с препоръки', 'idt' ), array(
-				Field::make( 'rich_text', 'text', __( 'Текст', 'idt' ) ),
+				Field::make( 'text', 'title', __( 'Заглавие', 'idt' ) ),
 				Field::make( 'complex', 'slides', __( 'Слайдове', 'idt' ) )
 					->set_layout( 'tabbed-horizontal' )
 					->add_fields( array(
 						Field::make( 'image', 'image', __( 'Снимка на автор', 'idt' ) ),
-						Field::make( 'rich_text', 'testimonial', __( 'Препоръка', 'idt' ) ),
+						Field::make( 'textarea', 'testimonial', __( 'Препоръка', 'idt' ) ),
 						Field::make( 'checkbox', 'add_btn', __( 'Добави бутон', 'idt' ) ),
 						Field::make( 'text', 'btn_text', __( 'Текст на бутон', 'idt' ) )
 							->set_width( 33 )

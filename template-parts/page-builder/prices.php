@@ -25,7 +25,39 @@
             <?php idt_render_button( $price['btn_text'], $price['btn_link'], $price['btn_new_tab'], 'btn' ) ?>
           </div>
         </div>
-      <?php endforeach ?>
+      <?php endforeach; ?>
     </div>
+    
+    <?php if ( !empty( $args['prices'] ) ) : ?>
+      <div class="section__calculator">
+        <h2><?php echo esc_html( $args['calculator_title'] ) ?></h2>
+
+        <div class="section__cols">
+          <div class="section__package">
+            <label for="package"><?php _e( 'Избери пакет', 'idt' )?></label>
+
+            <select name="package" id="package">
+              <?php foreach ( $args['prices'] as $index => $price ) : ?>
+                <option value="<?php echo esc_html( $price['price'] ) ?>"<?php echo $index === 0 ? ' selected' : ''?>>
+                  <?php echo esc_html( $price['title'] ) . ' - ' . esc_html( $price['price'] ) . 'лв / кв.м.' ?>
+                </option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+
+          <div class="section__quadrature">
+            <label for="quadrature"><?php _e( 'Въведи квадратура (кв.м.)', 'idt' )?></label>
+
+            <input type="text" name="quadrature" id="quadrature">
+          </div>
+        </div>
+
+        <div class="section__calculated-price">
+          <h3>Mоля въведете квадратура и цената ще ви излезе автоматично</h3>
+          
+          <h2><span></span>лв</h2>
+        </div>
+      </div>
+    <?php endif; ?>
   </div>
 </div>

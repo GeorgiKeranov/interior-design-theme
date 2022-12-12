@@ -171,3 +171,12 @@
 		}
 	}
 }
+
+.home .header {
+	opacity: 0;
+	transition: opacity .5s 2s, background-color .3s;
+}
+
+.home.animated .header {
+	opacity: 1;
+}

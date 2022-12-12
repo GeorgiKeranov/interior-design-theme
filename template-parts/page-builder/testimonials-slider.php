@@ -7,7 +7,7 @@
 		<?php endif; ?>
 
 		<?php if ( !empty( $args['slides'] ) ) : ?>
-			<div class="section__slider">
+			<div class="section__slider section-fade">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<?php foreach ( $args['slides'] as $slide ) : ?>

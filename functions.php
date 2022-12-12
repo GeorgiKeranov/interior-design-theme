@@ -169,6 +169,7 @@ function idt_scripts() {
 
 	wp_enqueue_script( 'idt-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'idt-calculator', get_template_directory_uri() . '/js/calculator.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'idt-animations', get_template_directory_uri() . '/js/animations.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'idt-gallery', get_template_directory_uri() . '/js/gallery.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idt-swiper', get_template_directory_uri() . '/js/swiper.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'idt-tabs', get_template_directory_uri() . '/js/tabs.js', array('jquery'), _S_VERSION, true );

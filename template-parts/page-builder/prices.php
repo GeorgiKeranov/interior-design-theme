@@ -29,7 +29,7 @@
     </div>
     
     <?php if ( !empty( $args['prices'] ) ) : ?>
-      <div class="section__calculator">
+      <div class="section__calculator section-fade">
         <h2><?php echo esc_html( $args['calculator_title'] ) ?></h2>
 
         <div class="section__cols">

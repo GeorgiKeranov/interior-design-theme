@@ -1,7 +1,6 @@
 .section-projects {
 	overflow: hidden;
 	padding: 2px 0;
-	margin-bottom: 40px;
 
 	.section__content {
 		display: flex;
@@ -230,4 +229,8 @@
 			pointer-events: none;
 		}
 	}
+}
+
+.section-projects--alt {
+	margin-bottom: 40px;
 }

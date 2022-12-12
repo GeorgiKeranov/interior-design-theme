@@ -15,7 +15,7 @@ foreach ( $projects as $project_id ) :
 	$project_thumbnail_id = get_post_thumbnail_id( $project_id );
 	$project_thumbnail_url = wp_get_attachment_image_url( $project_thumbnail_id, 'large' ); ?>
 
-	<div class="section__project">
+	<div class="section__project section-fade">
 		<?php if ( !empty( $project_thumbnail_url ) ) : ?>
 			<div class="section__thumbnail">
 				<div class="section__thumbnail-background-image" style="background-image: url(<?php echo $project_thumbnail_url ?>)">

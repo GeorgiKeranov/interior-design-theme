@@ -63,3 +63,54 @@
     }
   }
 }
+
+.home {
+  .section-intro {
+    top: -100vh;
+    transition: .9s;
+
+    &:before {
+      opacity: 0;
+      transition: .5s 1s;
+    }
+
+    .section__text,
+    .btn-alt {
+      opacity: 0;
+    }
+
+    .section__text {
+      position: relative;
+      top: 70vh;
+      transition: all .8s 3s;
+    }
+
+    .btn-alt:first-child {
+      transition: all .6s 4s;
+    }
+
+    .btn-alt:nth-child(2) {
+      transition: all .6s 4.5s;
+    }
+  }
+	
+}
+
+.home.animated {
+  .section-intro {
+    top: 0;
+
+    &:before {
+      opacity: 1;
+    }
+  
+    .section__text,
+    .btn-alt {
+      opacity: 1;
+    }
+
+    .section__text {
+      top: 0
+    }
+  }
+}

@@ -4,7 +4,7 @@
       <h2><?php echo esc_html( $args['title'] ) ?></h2>
     </div>
     
-    <div class="section__prices">
+    <div class="section__prices section-fade">
       <?php foreach ( $args['prices'] as $price ) : ?>
         <div class="section__price">
           <div class="section__price-title">

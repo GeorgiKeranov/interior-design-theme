@@ -7,7 +7,7 @@ if ( !empty( $args['background_image'] ) ) {
 }
 ?>
 
-<div id="consultation" class="section-txt-with-background-image"<?php echo $style ?>>
+<div id="consultation" class="section-txt-with-background-image section-fade"<?php echo $style ?>>
 	<div class="container">
 		<?php echo apply_filters( 'the_content', $args['text'] ); ?>
 	</div><!-- /.container -->

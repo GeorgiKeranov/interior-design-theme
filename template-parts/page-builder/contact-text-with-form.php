@@ -1,4 +1,4 @@
-<div class="section-contact-txt-with-form">
+<div class="section-contact-txt-with-form section-fade">
 	<div class="container">
 		<div class="section__cols">
 			<div class="section__content">

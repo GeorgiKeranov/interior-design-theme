@@ -7,7 +7,7 @@ $projects_query = new WP_Query( array(
 ) );
 ?>
 
-<div class="section-projects section-projects--js-ajax" data-max-pages="<?php echo $projects_query->max_num_pages ?>">
+<div class="section-projects section-projects--js-ajax section-fade" data-max-pages="<?php echo $projects_query->max_num_pages ?>">
 	<div class="section__categories">
 		<?php get_template_part('template-parts/taxonomy-categories', null, array(
 			'taxonomy' => 'idt_project_category'

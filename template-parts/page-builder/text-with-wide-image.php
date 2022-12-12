@@ -21,7 +21,7 @@ if ( !empty( $args['add_breadcrumbs'] ) ) {
 		?>
 	</div><!-- /.section__content -->
 
-	<div class="section__image">
+	<div class="section__image section-fade">
 		<div class="section__background" style="background-image: url(<?php echo wp_get_attachment_image_url( $args['image'], 'large' ) ?>)"></div><!-- /.section__background -->
 	</div><!-- /.section__image -->
 </div><!-- /.section-text-with-wide-image -->

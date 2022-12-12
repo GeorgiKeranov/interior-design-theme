@@ -6,7 +6,7 @@
 			</div><!-- /.section__top -->
 		<?php endif; ?>
 
-		<div class="section-cols section-cols--three">
+		<div class="section-cols section-cols--three section-fade">
 			<?php $check_svg = idt_get_svg('icon-check') ?>
 
 			<div class="section__col">
@@ -41,13 +41,13 @@
 		</div><!-- /.section-cols section-cols--three -->
 
 		<?php if ( !empty( $args['text_bottom'] ) ) : ?>
-			<div class="section__bottom">
+			<div class="section__bottom section-fade">
 				<?php echo apply_filters( 'the_content', $args['text_bottom'] ); ?>
 			</div><!-- /.section__bottom -->
 		<?php endif; ?>
 
 		<?php if ( !empty($args['add_image_cols'] ) ) : ?>
-			<div class="section__images">
+			<div class="section__images section-fade">
 				<div class="section-cols section-cols--three">
 					<div class="section__col">
 						<?php

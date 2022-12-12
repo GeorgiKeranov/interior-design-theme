@@ -2,7 +2,7 @@
 	$('.header .header__menu-toggle').on('click', function(e) {
 		e.preventDefault();
 		
-		$(this).parent().toggleClass('header__menu-mobile--active');
+		$('.header').toggleClass('header--active');
 	});
 
 	if (!$('body.home').length) {

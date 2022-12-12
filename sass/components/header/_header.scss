@@ -58,7 +58,7 @@
 	}
 
 	@include resolution(desktop-small) {
-		padding: 5px 0;
+		padding: 8px 0;
 	}
 
 	@include resolution(tablet-portrait) {
@@ -118,18 +118,16 @@
 		}
 
 		.header__menu-toggle {
-			width: 30px;
-			height: 17px;
+			width: 35px;
+			height: 25px;
 
 			div {
-				height: 3px;
-
 				&:nth-child(2) {
-					top: 7px;
+					top: 10px;
 				}
 	
 				&:nth-child(3) {
-					top: 14px;
+					top: 20px;
 				}
 			}
 		}
@@ -139,8 +137,51 @@
 				div {
 					&:nth-child(1),
 					&:nth-child(3) {
-						top: 7px;
+						top: 10px;
 					}
+				}
+			}
+		}
+	}
+}
+
+.header--active {
+	@include resolution(tablet-portrait) {
+		.header__menu-toggle {
+			div {
+				transition: background .2s, top .2s, left .2s, opacity .2s, transform .2s .25s;
+				
+				&:nth-child(1),
+				&:nth-child(3) {
+					top: 12px;
+				}
+			
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:nth-child(1) {
+					transform: rotate(45deg);
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+
+		.nav-mobile {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	
+	@include resolution(mobile) {
+		.header__menu-toggle {
+			div {
+				&:nth-child(1),
+				&:nth-child(3) {
+					top: 10px;
 				}
 			}
 		}
@@ -168,6 +209,18 @@
 
 		ul > li:after {
 			background-color: #ddd;
+		}
+	}
+}
+
+.header--transparent.header--active {
+	.logo--header {
+		background-image: url(images/logo.png);
+	}
+
+	.header__menu-toggle {
+		div {
+			background-color: #000;
 		}
 	}
 }

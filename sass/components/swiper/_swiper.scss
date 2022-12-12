@@ -124,6 +124,16 @@
 	}
 
 	@include resolution(mobile-portrait) {
+		.swiper-slide__inner-inner {
+			flex-wrap: wrap;
+			justify-content: center;
+			padding-top: 60px;
+		}
+
+		.swiper-slide__inner {
+			padding: 0;
+		}
+
 		.swiper-button-prev,
 		.swiper-button-next {
 			width: 25px;
@@ -135,7 +145,7 @@
 		}
 
 		.swiper-button-prev {
-			left: 4px;
+			left: -12px;
 
 			&:after {
 				margin-top: 1.5px;
@@ -144,12 +154,23 @@
 		}
 
 		.swiper-button-next {
-			right: 4px;
+			right: -12px;
 
 			&:after {
 				margin-top: 1.5px;
 				margin-left: 3px;
 			}
+		}
+
+		.swiper-slide__image {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translate(-50%, -50%);
+		}
+
+		.swiper-slide__author h3 {
+			font-size: 19px;
 		}
 	}
 }

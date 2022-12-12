@@ -7,6 +7,8 @@
   }
 
   .section__title {
+    margin-bottom: 40px;
+
     h2 {
       text-transform: uppercase;
     }
@@ -189,6 +191,41 @@
 
     h3 {
       display: none;
+    }
+  }
+
+  @include resolution(mobile) {
+    .section__price {
+      padding: 10px 20px 54px;
+    }
+  }
+
+  @include resolution(mobile-small) {  
+    .section__prices {
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .section__price {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
+    .section__cols {
+      flex-wrap: wrap;
+    }
+
+    .section__calculator {
+      padding: 30px 20px;
+    }
+
+    .section__package,
+    .section__square-meters {
+      width: 100%;
+    }
+
+    .section__package {
+      margin-bottom: 20px;
     }
   }
 }

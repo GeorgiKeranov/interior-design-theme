@@ -17,22 +17,9 @@
 		padding: 30px 0;
 	}
 
-	@include resolution(mobile) {
-		background-image: none !important;
-		background-color: #ddd;
-
-		h1 {
-			text-align: center;
-
-			br {
-				display: none;
-			}
-		}
-	}
-
 	@include resolution(mobile-portrait) {
-		h1 {
-			font-size: 24px;
+		h2 {
+			font-size: 25px;
 		}
 	}
 }

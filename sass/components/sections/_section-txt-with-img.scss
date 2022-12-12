@@ -15,7 +15,6 @@
 
 	@include resolution(mobile) {
 		.section__col:nth-child(2) {
-			order: -1;
 			margin-bottom: 20px;
 		}
 	}

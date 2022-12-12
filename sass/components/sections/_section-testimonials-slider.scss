@@ -11,7 +11,7 @@
 		margin-bottom: 40px;
 	}
 
-	span {
+	.swiper-slide__text span {
 		font-size: 70px;
 		line-height: 1;
 		font-family: serif;
@@ -38,4 +38,32 @@
 			margin-bottom: 30px;
 		}
 	}
+
+	@include resolution(mobile) {
+		p {
+			font-size: 19px;
+		}
+	}
+
+	@include resolution(mobile-small) {  
+		overflow: hidden;
+
+		.swiper-slide__text {
+      position: relative;
+    }
+    
+		.swiper-slide__text span {
+			position: absolute;
+			top: -19px;
+			left: -11px;
+		}
+		
+		.swiper-container {
+			overflow: visible;
+		}
+
+		h2 {
+			margin-bottom: 72px;
+		}
+  }
 }

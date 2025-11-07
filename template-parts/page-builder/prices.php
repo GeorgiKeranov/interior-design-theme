@@ -13,7 +13,8 @@
           
           <?php if ( !empty( $price['price'] ) ) : ?>
             <div class="section__price-price">
-              <h2><?php echo esc_html( $price['price'] ) ?><span><strong>лв</strong> / кв. м.</span></h2>
+              <?php $euro_price = round(intval($price['price']) / 1.95583); ?>
+              <h2><?php echo esc_html( $price['price'] ) ?><span><strong>лв</strong></span> / <?php echo esc_html( $euro_price ) ?><span><strong>€</strong> / кв. м.</span></h2>
             </div>
           <?php endif; ?>
           
@@ -38,8 +39,10 @@
 
             <select name="package" id="package">
               <?php foreach ( $args['prices'] as $index => $price ) : ?>
+                <?php $euro_price = round(intval($price['price']) / 1.95583); ?>
+
                 <option value="<?php echo esc_html( $price['price'] ) ?>"<?php echo $index === 0 ? ' selected' : ''?>>
-                  <?php echo esc_html( $price['title'] ) . ' - ' . esc_html( $price['price'] ) . 'лв / кв.м.' ?>
+                  <?php echo esc_html( $price['title'] ) . ' - ' . esc_html( $price['price'] ) . 'лв / ' . esc_html( $euro_price ) . '€ / кв.м.' ?>
                 </option>
               <?php endforeach; ?>
             </select>
@@ -55,7 +58,7 @@
         <div class="section__calculated-price">
           <h3><?php echo esc_html( $args['calculator_text'] ) ?></h3>
           
-          <h2><span></span>лв</h2>
+          <h2><span class="section__price-bgn"></span>лв / <span class="section__price-eur"></span>€</h2>
         </div>
       </div>
     <?php endif; ?>
